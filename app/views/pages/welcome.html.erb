@@ -1,77 +1,283 @@
-<nav class="menu">
-  <div class="menu__logo">
+<nav class="navbar">
+  <div class="navbar__logo">
     <%= image_tag "farm-match-logo.png" %>
-    <h2>FARM MATCH</h2>
+    <%= link_to root_path do %>
+      <h1>FARM MATCH</h1>
+    <% end %>
   </div>
 
-  <div class="menu__links">
-    <p><a href="#">How it works</a></p>
-    <p><a href="#">Farmers</a></p>
-    <p><a href="#">Contractors and Farm Workers</a></p>
+  <div class="navbar__options">
+    <p> <%= link_to "How it works", root_path %></p>
+    <p> <%= link_to "Farmers", root_path %></p>
+    <p> <%= link_to "Agri Contractors & Farm Workers", root_path %></p>
   </div>
 </nav>
+
 <div class="banner">
   <div class="title-container">
-    <h1 class="title">FARM <br>MATCH</h1>
+    <h1 class="banner__title">FARM <br>MATCH</h1>
   </div>
-  <h1>We Connect Farmers to Contractors and Farm Workers</h1>
-</div>
+  <div class="banner__tagline">
+    We connect Farmers with skilled Agri Contractors <br> and Farm Workers in Ireland
+  </div>
 
-
-
-<div class="container">
-  Container
-  <div>
-    <button class="btn btn--primary">Button!</button>
-    <p>Something </p>
+  <div class="banner__join-us">
+    <button class="btn btn--primary">JOIN THE WAITING LIST!</button>
   </div>
 </div>
 
 
-<section>
-  <div class="container">
-    <h1>How it works</h1>
-    <h4>Operating costs on Irish farms have increased dramatically in recent years and the entire Irish agricultural sector has faced unprecedented labour shortages.
-Farm Match allows Farmers to post a job and receive quotations from interested peer reviewed Agri Contractors and Farm Workers</h4>
-    <%# info %>
-  </div>
+<main>
+  <section class="farmers">
+    <div class="why-us container">
+      <div class="why-us__header">
+        <h1>WHY CHOOSE FARM MATCH?</h1>
+      </div>
 
-  <div class="three-steps container">
-    <%# section for the three steps %>
-    <div class="step">
-      <h1>Post a job</h1>
-      <h2>Step 1</h2>
-      <p>
-        Need a job done on your farm? <br>
-        No problem, just specify your task on the website and give us some basic details.
-        Then leave the rest to us!
-      </p>
-    </div>
-    <div class="step">
-      <h1>Get Matched</h1>
-      <h2>Step 2</h2>
-      <p>
-        Match made in Heaven! <br>
-        Farm Match has an advanced proprietary algorithm which will match your task to interested
-        Agri Contractors and Farm Workers. Review their profiles and then share your contact details
-        with whoever you wish to quickly receive quotes.
-      </p>
-    </div>
-    <div class="step">
-      <h1>Review the job</h1>
-      <h2>Step 1</h2>
-      <p>
-        Need a job done on your farm? <br>
-        No problem, just specify your task on the website and give us some basic details.
-        Then leave the rest to us!
-      </p>
-    </div>
-  </div>
+      <div class="farmers__header">
+        <h1 class="farmers__title">FARMERS</h1>
+      </div>
 
-  <div class="container">
-    <h2>Are you a Farmer, Ag Contractor or Farm Worker?</h2>
-    <div>
-      <button class="btn btn--primary">Join us</button>
+      <div class="reasons">
+        <div class="reason-card reason-card--yellow">
+          <div>
+            <i class="fa-regular fa-thumbs-up"></i>
+          </div>
+          <h2>Easy to use</h2>
+          <p>Simply post your task on the website & wait for the responses to come in!</p>
+        </div>
+        <div class="reason-card reason-card--yellow">
+          <div>
+            <i class="fa-regular fa-clock"></i>
+          </div>
+          <h2>Save time</h2>
+          <p>No more ringing around contractors or advertising in classifieds</p>
+        </div>
+        <div class="reason-card reason-card--yellow">
+          <div>
+            <i class="fa-solid fa-piggy-bank"></i>
+          </div>
+          <h2>Save money</h2>
+          <p>Compare quotes to get competitive pricing & get better value for money</p>
+        </div>
+        <div class="reason-card reason-card--yellow">
+          <div>
+            <i class="fa-regular fa-trash-can"></i>
+          </div>
+          <h2>No spam</h2>
+          <p>Our algorithm matches you only with Agri Contractors & Farm Workers who have express a direct interest in your task </p>
+        </div>
+        <div class="reason-card reason-card--yellow">
+          <div>
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+          <h2>Peer reviewed</h2>
+          <p>Leave a review once the work is done & help build a reliable Agri Contractors & Farmer Workers </p>
+        </div>
+      </div>
+
+      <div class="join">
+        <button class="btn btn--primary">JOIN THE WAITING LIST!</button>
+      </div>
     </div>
-  </div>
-</section>
+
+    <div class="farm-images container">
+        <%= image_tag "farmer.jpg" %>
+        <%= image_tag "tractor_and_grass.jpg" %>
+      </div>
+
+
+    <div class="how-it-works container">
+      <div class="how-it-works__header">
+        <h1>HOW DOES IT WORK?</h1>
+        <p>
+          Operating costs on Irish farms have increased dramatically in recent years and the entire Irish agricultural sector has faced unprecedented labour shortages.
+          Farm Match allows Farmers to post a job and receive quotations from interested peer reviewed Agri Contractors and Farm Workers.
+        </p>
+      </div>
+
+      <div class="three-steps">
+        <div class="card">
+          <div class="card__header">
+            <div class="card__circle">
+              <h2>1</h2>
+            </div>
+            <h1>Post a task</h1>
+          </div>
+          <div class="card__body">
+            <h4>Need a task done on your farm?</h4>
+            <p>
+              No problem! Just specify your task on our website & give us some basic details of what you need done.
+            </p>
+            <p>
+              Leave the rest to Farm Match!
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__header">
+            <div class="card__circle">
+              <h2>2</h2>
+            </div>
+            <h1>Get matched</h1>
+          </div>
+          <div class="card__body">
+            <h4>Match made in heaven!</h4>
+          <p>
+            Our algorithm pairs your task with interested Agri Contractors & Farm Workers.
+            Review their profiles & shortlist your preferred candidates. Your contact details will only be revealed to shortlisted candidates. They will then contact you & discuss the task & pricing in detail.
+          </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__header">
+            <div class="card__circle">
+              <h2>3</h2>
+            </div>
+            <h1>Review the task</h1>
+          </div>
+          <div class="card__body">
+            <h4>Reward honest and reliable service</h4>
+            <p>
+              Once the task is complete, you will be asked to rate it. Your feedback helps build a reliable community of Agri Contractor or Farm Workers.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="join">
+        <button class="btn btn--primary">JOIN THE WAITING LIST!</button>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="workers container">
+
+    <div class="why-us container">
+      <div class="why-us__header">
+        <h1>WHY CHOOSE FARM MATCH?</h1>
+      </div>
+
+      <div class="workers__header">
+        <h1 class="workers__title">AGRI CONTRACTORS </h1>
+        <h1>&</h1>
+        <h1>FARM WORKERS</h1>
+      </div>
+
+      <div class="reasons">
+        <div class="reason-card reason-card--green">
+          <div>
+            <i class="fa-regular fa-thumbs-up"></i>
+          </div>
+          <h2>Easy to use</h2>
+          <p>Want the task? Then simply express interest in it on the website </p>
+        </div>
+        <div class="reason-card reason-card--green">
+          <div>
+            <i class="fa-regular fa-clock"></i>
+          </div>
+          <h2>Save time</h2>
+          <p>Our algorithm ensures you're matched with tasks that fit your preferences</p>
+        </div>
+        <div class="reason-card reason-card--green">
+          <div>
+            <i class="fa-solid fa-piggy-bank"></i>
+          </div>
+          <h2>Make Money </h2>
+          <p>Allows you access to more task opportunities so you can increase your income</p>
+        </div>
+        <div class="reason-card reason-card--green">
+          <div>
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+          <h2>Increased Visibility</h2>
+          <p>Our algorithm matches you only with Agri Contractors & Farm Workers who have express a direct interest in your task </p>
+        </div>
+        <div class="reason-card reason-card--green">
+          <div>
+            <i class="fa-solid fa-medal"></i>
+          </div>
+          <h2>Build a reputation </h2>
+          <p>Receive reviews from farmers after completing tasks & build a positive reputation leading to more work opportunities  </p>
+        </div>
+      </div>
+
+      <div class="join">
+        <button class="btn btn--primary">JOIN THE WAITING LIST!</button>
+      </div>
+    </div>
+
+
+
+
+    <div class="how-it-works container">
+      <div class="how-it-works__header">
+        <h1>HOW DOES IT WORK?</h1>
+        <p>
+          Operating costs on Irish farms have increased dramatically in recent years and the entire Irish agricultural sector has faced unprecedented labour shortages.
+          Farm Match allows Farmers to post a job and receive quotations from interested peer reviewed Agri Contractors and Farm Workers.
+        </p>
+      </div>
+
+      <div class="three-steps">
+        <div class="card">
+          <div class="card__header">
+            <div class="card__circle">
+              <h2>1</h2>
+            </div>
+            <h1>Set up a profile</h1>
+          </div>
+          <div class="card__body">
+            <h4>Want more work?</h4>
+            <p>
+              Simply create a profile telling us what type of tasks you want to do & how far you are willing to travel.
+            </p>
+            <p>
+              Leave the rest to Farm Match!
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__header">
+            <div class="card__circle">
+              <h2>2</h2>
+            </div>
+            <h1>Get matched</h1>
+          </div>
+          <div class="card__body">
+            <h4>Win the task!</h4>
+          <p>
+            Get notified when a suitable task appears in your area & express interest in it.
+            If shortlisted by the farmer, then for a small fee, you will receive the farmers contact details. Contact the farmer directly to discuss the task & pricing in detail. Take the opportunity to promote yourself & win the task!
+          </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__header">
+            <div class="card__circle">
+              <h2>3</h2>
+            </div>
+            <h1>Get reviewed</h1>
+          </div>
+          <div class="card__body">
+            <h4>Build a reputation</h4>
+            <p>
+              Once the task is complete, the farmer will be asked to review your performance. Get a 5 Star Rating & gain even more opportunities in the future.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="join">
+        <button class="btn btn--primary">JOIN THE WAITING LIST!</button>
+      </div>
+
+      <div class="farm-images">
+        <%= image_tag "farmer.jpg" %>
+        <%= image_tag "tractor_and_grass.jpg" %>
+      </div>
+
+    </div>
+  </section>
+</main>
