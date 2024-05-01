@@ -78,4 +78,8 @@
       filter: saturate(1.2) brightness(110%);
     }
   }
+
+  &--active {
+    border: 2px solid var(--color-tertiary);
+  }
 }

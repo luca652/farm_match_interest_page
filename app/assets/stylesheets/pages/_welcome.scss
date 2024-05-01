@@ -43,6 +43,12 @@
 }
 
 
+.tab-options {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
 .farmers {
   margin-top: var(--space-xxxl);
 }
@@ -211,4 +217,8 @@
     color: var(--color-tertiary);
     -webkit-text-stroke: 2px var(--color-text-header);
   }
+}
+
+.hidden {
+  display: none;
 }

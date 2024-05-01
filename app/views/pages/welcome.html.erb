@@ -27,8 +27,14 @@
 </div>
 
 
-<main>
-  <section class="farmers">
+<main data-controller="section">
+
+  <div class="tab-options container">
+    <button id="farmers" class="tab btn btn--primary btn--active" data-section-target="farmersButton" data-action="click->section#activateSection">Farmers</button>
+    <button id="contractors" class="tab btn btn--secondary" data-section-target="contractorsButton" data-action="click->section#activateSection">Agri Contractors & Farm Workers</button>
+  </div>
+
+  <section class="farmers" id="farmers-section" data-section-target="farmersSection">
     <div class="why-us container">
       <div class="why-us__header">
         <h1>WHY CHOOSE FARM MATCH?</h1>
@@ -152,8 +158,9 @@
     </div>
   </section>
 
-  <section class="workers container">
 
+
+  <section class="workers" id="contractors-section" data-section-target="contractorsSection">
     <div class="why-us container">
       <div class="why-us__header">
         <h1>WHY CHOOSE FARM MATCH?</h1>
