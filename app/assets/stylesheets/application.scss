@@ -1,0 +1,18 @@
+
+// Mixins
+@import "mixins/media";
+
+// Configuration
+@import "config/fonts";
+@import "config/reset";
+@import "config/variables";
+
+// Components
+@import "components/btn";
+@import "components/navbar";
+
+// Layouts
+@import "layouts/container";
+
+// Pages
+@import "pages/welcome";
