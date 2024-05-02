@@ -1,4 +1,4 @@
-<nav class="navbar">
+<nav class="navbar" data-controller="navbar">
   <div class="navbar__logo">
     <%= image_tag "farm-match-logo.png" %>
     <%= link_to root_path do %>
@@ -6,11 +6,15 @@
     <% end %>
   </div>
 
-  <div class="navbar__options">
+  <div class="navbar__options" data-navbar-target="navbarLinks" data-action="resize@window->navbar#navbarToggle">
     <p> <%= link_to "How it works", root_path %></p>
     <p> <%= link_to "Farmers", root_path %></p>
     <p> <%= link_to "Agri Contractors & Farm Workers", root_path %></p>
   </div>
+
+  <button class="burger-button" data-navbar-target="burgerButton" data-action="click->navbar#menuToggle">
+    <i class="fa-solid fa-bars"></i>
+  </button>
 </nav>
 
 <div class="banner">
