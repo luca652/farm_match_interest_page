@@ -1,4 +1,4 @@
-<nav class="navbar">
+<nav class="navbar" data-controller="navbar">
   <div class="navbar__logo">
     <%= image_tag "farm-match-logo.png" %>
     <%= link_to root_path do %>
@@ -6,11 +6,15 @@
     <% end %>
   </div>
 
-  <div class="navbar__options">
+  <div class="navbar__options" data-navbar-target="navbarLinks" data-action="resize@window->navbar#navbarToggle">
     <p> <%= link_to "How it works", root_path %></p>
     <p> <%= link_to "Farmers", root_path %></p>
     <p> <%= link_to "Agri Contractors & Farm Workers", root_path %></p>
   </div>
+
+  <button class="burger-button" data-navbar-target="burgerButton" data-action="click->navbar#menuToggle">
+    <i class="fa-solid fa-bars"></i>
+  </button>
 </nav>
 
 <div class="banner">
@@ -28,6 +32,35 @@
 
 
 <main data-controller="section">
+  <div class="why-us">
+    <div class="why-us__header">
+      <h2>WHY FARM MATCH?</h2>
+      <div>
+        <h4>FARMERS</h4>
+        <i class="fa-solid fa-circle-chevron-right"></i>
+      </div>
+    </div>
+    <div class="why-us__body">
+      <div>
+        <i class="fa-regular fa-hand-point-right"></i>
+        <p>
+          Operating costs on Irish farms have increased dramatically in recent years.
+        </p>
+      </div>
+      <div>
+        <i class="fa-regular fa-hand-point-right"></i>
+        <p>
+          The entire Irish agricultural sector has faced unprecedented labour shortages.
+        </p>
+      </div>
+      <div>
+        <i class="fa-regular fa-hand-point-right"></i>
+        <p>
+          Farm Match allows Farmers to post a job and receive quotations from interested peer reviewed Agri Contractors and Farm Workers.
+        </p>
+      </div>
+    </div>
+  </div>
 
   <div class="tab-options container">
     <button id="farmers" class="tab btn btn--primary btn--active" data-section-target="farmersButton" data-action="click->section#activateSection">Farmers</button>
@@ -36,9 +69,6 @@
 
   <section class="farmers" id="farmers-section" data-section-target="farmersSection">
     <div class="why-us container">
-      <div class="why-us__header">
-        <h1>WHY CHOOSE FARM MATCH?</h1>
-      </div>
 
       <div class="farmers__header">
         <h1 class="farmers__title">FARMERS</h1>
@@ -95,11 +125,7 @@
 
     <div class="how-it-works container">
       <div class="how-it-works__header">
-        <h1>HOW DOES IT WORK?</h1>
-        <p>
-          Operating costs on Irish farms have increased dramatically in recent years and the entire Irish agricultural sector has faced unprecedented labour shortages.
-          Farm Match allows Farmers to post a job and receive quotations from interested peer reviewed Agri Contractors and Farm Workers.
-        </p>
+        <h2>HOW DOES IT WORK?</h2>
       </div>
 
       <div class="three-steps">
@@ -160,11 +186,8 @@
 
 
 
-  <section class="workers" id="contractors-section" data-section-target="contractorsSection">
+  <section class="workers hidden" id="contractors-section" data-section-target="contractorsSection">
     <div class="why-us container">
-      <div class="why-us__header">
-        <h1>WHY CHOOSE FARM MATCH?</h1>
-      </div>
 
       <div class="workers__header">
         <h1 class="workers__title">AGRI CONTRACTORS </h1>
