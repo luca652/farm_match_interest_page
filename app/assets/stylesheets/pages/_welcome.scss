@@ -13,13 +13,19 @@
   background-size: cover;
 
   .banner__tagline {
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: var(--color-tertiary);
     text-shadow: 1px 1px var(--color-text-header), -1px 1px var(--color-text-header), 1px -1px var(--color-text-header), -1px -1px var(--color-text-header);
-    width: 60%;
-    margin-bottom: var(--space-xl);
+    width: 80%;
+    margin-bottom: var(--space-m);
     text-align: center;
     font-weight: bold;
+
+    @include media(tabletAndUp) {
+      font-size: 2rem;
+      width: 60%;
+      margin-bottom: var(--space-xl);
+    }
   }
 
   .banner__join-us {
@@ -30,16 +36,25 @@
 }
 
 .title-container {
-  margin-top: 4rem;
+  margin-top: var(--space-xxl);
+  margin-bottom: var(--space-m);
+
+  @include media(tabletAndUp) {
+    margin-top: var(--space-xxxxl);
+  }
 }
 
 
 .banner__title {
   color: white;
-  font-size: 6rem;
+  font-size: 4.5rem;
   text-align: center;
   font-weight: bold;
   -webkit-text-stroke: 2px var(--color-text-header);
+
+  @include media(tabletAndUp) {
+    font-size: 6rem;
+  }
 }
 
 
@@ -72,11 +87,62 @@
   margin-bottom: var(--space-xxxxl);
 }
 
-.why-us__header {
+.why-us {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: auto;
   margin-bottom: var(--space-m);
+  margin-top: var(--space-m);
+
+  @include media(tabletAndUp) {
+    margin-top: var(--space-xxxl);
+    width: 60%;
+
+    h2 {
+      font-size: var(--font-size-xxxl);
+    }
+  }
+}
+
+.why-us__header {
+
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  h4 {
+    background-color: var(--color-primary);
+    padding: var(--space-xxxs) var(--space-xs);
+    border-radius: var(--border-radius);
+    margin-right: var(--space-xxs);
+    color: var(--color-white);
+  }
+}
+
+.why-us__body {
+  background-color: var(--color-tertiary);
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  margin: var(--space-xs) var(--space-m);
+  box-shadow: 2px 2px var(--color-text-header);
+
+  @include media(tabletAndUp) {
+    margin: var(--space-m) var(--space-m);
+  }
+
+  div {
+    display: flex;
+    align-items: center;
+  }
+
+  p {
+    text-align: start;
+    margin-left: 1rem;
+    margin-bottom: .5rem;
+  }
 }
 
 .why-us .reasons {
@@ -87,14 +153,14 @@
 }
 
 .reason-card {
-  width: 250px;
+  width: 300px;
   display: flex;
   flex-direction: column;
   text-align: center;
   margin: 1rem;
   background-color: white;
   padding: 15px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 4px 2px rgba(0,0,0,0.2);
   border-radius: var(--border-radius);
 
   i {
