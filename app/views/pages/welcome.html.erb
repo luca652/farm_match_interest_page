@@ -35,10 +35,6 @@
   <div class="why-us">
     <div class="why-us__header">
       <h2>WHY FARM MATCH?</h2>
-      <div>
-        <h4>FARMERS</h4>
-        <i class="fa-solid fa-circle-chevron-right"></i>
-      </div>
     </div>
     <div class="why-us__body">
       <div>
@@ -62,19 +58,21 @@
     </div>
   </div>
 
-  <div class="tab-options container">
-    <button id="farmers" class="tab btn btn--primary btn--active" data-section-target="farmersButton" data-action="click->section#activateSection">Farmers</button>
-    <button id="contractors" class="tab btn btn--secondary" data-section-target="contractorsButton" data-action="click->section#activateSection">Agri Contractors & Farm Workers</button>
-  </div>
-
-  <section class="farmers" id="farmers-section" data-section-target="farmersSection">
-    <div class="why-us container">
-
-      <div class="farmers__header">
-        <h1 class="farmers__title">FARMERS</h1>
+  <section class="why-sign-up why-and-how">
+    <div class="why-sign-up__header why-and-how-header">
+      <h2>WHY FARM MATCH?</h2>
+      <div>
+        <h4 data-section-target="whyCategoryTitle">FARMERS</h4>
+        <div class="chevrons">
+          <i class="fa-solid fa-circle-chevron-left" data-action="click->section#toggleSection"></i>
+          <i class="fa-solid fa-circle-chevron-right" data-action="click->section#toggleSection"></i>
+        </div>
       </div>
+    </div>
 
-      <div class="reasons">
+    <%# REASONS FOR FARMERS (can be switched with REASONS FOR CONTRACTORS) %>
+    <div id="why-farmers" data-section-target="whyFarmersSection">
+      <div class="reasons container">
         <div class="reason-card reason-card--yellow">
           <div>
             <i class="fa-regular fa-thumbs-up"></i>
@@ -111,24 +109,74 @@
           <p>Leave a review once the work is done & help build a reliable Agri Contractors & Farmer Workers </p>
         </div>
       </div>
+    </div>
 
-      <div class="join">
-        <button class="btn btn--primary">JOIN THE WAITING LIST!</button>
+    <%# REASONS FOR CONTRACTORS (can be switched with REASONS FOR FARMERS)%>
+    <div class="hidden" id="why-contractors" data-section-target="whyContractorsSection">
+      <div class="reasons container">
+        <div class="reason-card reason-card--green">
+          <div>
+            <i class="fa-regular fa-thumbs-up"></i>
+          </div>
+          <h2>Easy to use</h2>
+          <p>Want the task? Then simply express interest in it on the website </p>
+        </div>
+        <div class="reason-card reason-card--green">
+          <div>
+            <i class="fa-regular fa-clock"></i>
+          </div>
+          <h2>Save time</h2>
+          <p>Our algorithm ensures you're matched with tasks that fit your preferences</p>
+        </div>
+        <div class="reason-card reason-card--green">
+          <div>
+            <i class="fa-solid fa-piggy-bank"></i>
+          </div>
+          <h2>Make Money </h2>
+          <p>Allows you access to more task opportunities so you can increase your income</p>
+        </div>
+        <div class="reason-card reason-card--green">
+          <div>
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+          <h2>Increased Visibility</h2>
+          <p>Our algorithm matches you only with Agri Contractors & Farm Workers who have express a direct interest in your task </p>
+        </div>
+        <div class="reason-card reason-card--green">
+          <div>
+            <i class="fa-solid fa-medal"></i>
+          </div>
+          <h2>Build a reputation </h2>
+          <p>Receive reviews from farmers after completing tasks & build a positive reputation leading to more work opportunities  </p>
+        </div>
       </div>
     </div>
 
-    <div class="farm-images container">
-        <%= image_tag "farmer.jpg" %>
-        <%= image_tag "tractor_and_grass.jpg" %>
+    <div class="join">
+      <button class="btn btn--primary">JOIN THE WAITING LIST!</button>
+    </div>
+
+  </section>
+
+  <div class="farm-images container">
+    <%= image_tag "farmer.jpg" %>
+    <%= image_tag "tractor_and_grass.jpg" %>
+  </div>
+
+  <section class="how-it-works container why-and-how">
+    <div class="how-it-works__header why-and-how-header">
+      <h2>HOW DOES IT WORK?</h2>
+      <div>
+        <h4 data-section-target="howCategoryTitle">FARMERS</h4>
+        <div class="chevrons">
+          <i class="fa-solid fa-circle-chevron-left" data-action="click->section#toggleSection"></i>
+          <i class="fa-solid fa-circle-chevron-right" data-action="click->section#toggleSection"></i>
+        </div>
       </div>
+    </div>
 
-
-    <div class="how-it-works container">
-      <div class="how-it-works__header">
-        <h2>HOW DOES IT WORK?</h2>
-      </div>
-
-      <div class="three-steps">
+    <div id="how-farmers" data-section-target="howFarmersSection">
+      <div class="three-steps container">
         <div class="card">
           <div class="card__header">
             <div class="card__circle">
@@ -176,81 +224,10 @@
           </div>
         </div>
       </div>
-
-      <div class="join">
-        <button class="btn btn--primary">JOIN THE WAITING LIST!</button>
-      </div>
-
-    </div>
-  </section>
-
-
-
-  <section class="workers hidden" id="contractors-section" data-section-target="contractorsSection">
-    <div class="why-us container">
-
-      <div class="workers__header">
-        <h1 class="workers__title">AGRI CONTRACTORS </h1>
-        <h1>&</h1>
-        <h1>FARM WORKERS</h1>
-      </div>
-
-      <div class="reasons">
-        <div class="reason-card reason-card--green">
-          <div>
-            <i class="fa-regular fa-thumbs-up"></i>
-          </div>
-          <h2>Easy to use</h2>
-          <p>Want the task? Then simply express interest in it on the website </p>
-        </div>
-        <div class="reason-card reason-card--green">
-          <div>
-            <i class="fa-regular fa-clock"></i>
-          </div>
-          <h2>Save time</h2>
-          <p>Our algorithm ensures you're matched with tasks that fit your preferences</p>
-        </div>
-        <div class="reason-card reason-card--green">
-          <div>
-            <i class="fa-solid fa-piggy-bank"></i>
-          </div>
-          <h2>Make Money </h2>
-          <p>Allows you access to more task opportunities so you can increase your income</p>
-        </div>
-        <div class="reason-card reason-card--green">
-          <div>
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </div>
-          <h2>Increased Visibility</h2>
-          <p>Our algorithm matches you only with Agri Contractors & Farm Workers who have express a direct interest in your task </p>
-        </div>
-        <div class="reason-card reason-card--green">
-          <div>
-            <i class="fa-solid fa-medal"></i>
-          </div>
-          <h2>Build a reputation </h2>
-          <p>Receive reviews from farmers after completing tasks & build a positive reputation leading to more work opportunities  </p>
-        </div>
-      </div>
-
-      <div class="join">
-        <button class="btn btn--primary">JOIN THE WAITING LIST!</button>
-      </div>
     </div>
 
-
-
-
-    <div class="how-it-works container">
-      <div class="how-it-works__header">
-        <h1>HOW DOES IT WORK?</h1>
-        <p>
-          Operating costs on Irish farms have increased dramatically in recent years and the entire Irish agricultural sector has faced unprecedented labour shortages.
-          Farm Match allows Farmers to post a job and receive quotations from interested peer reviewed Agri Contractors and Farm Workers.
-        </p>
-      </div>
-
-      <div class="three-steps">
+    <div class="hidden" id="how-contractors" data-section-target="howContractorsSection">
+      <div class="three-steps container">
         <div class="card">
           <div class="card__header">
             <div class="card__circle">
@@ -298,16 +275,11 @@
           </div>
         </div>
       </div>
-
-      <div class="join">
-        <button class="btn btn--primary">JOIN THE WAITING LIST!</button>
-      </div>
-
-      <div class="farm-images">
-        <%= image_tag "farmer.jpg" %>
-        <%= image_tag "tractor_and_grass.jpg" %>
-      </div>
-
     </div>
+
+    <div class="join">
+      <button class="btn btn--primary">JOIN THE WAITING LIST!</button>
+    </div>
+
   </section>
 </main>
