@@ -1,0 +1,9 @@
+<h1>Register</h1>
+
+<%= simple_form_for @potential_user do |f| %>
+  <%= f.input :name %>
+  <%= f.input :surname %>
+  <%= f.input :email %>
+  <%= f.input :job, collection: PotentialUser::JOBS %>
+  <%= f.submit 'Submit'%>
+<% end %>
