@@ -8,8 +8,9 @@ class PotentialUsersController < ApplicationController
     @potential_user = PotentialUser.new(potential_user_params)
 
     if @potential_user.save
-      redirect_to root_path, notice: "Thanks for your interest in Farm Match!"
-      # add thank you message
+      redirect_to root_path, notice: { title: "Thank you for your interest in Farm Match!",
+                                       message: "We will keep you updated on our progress." }
+
     else
       render 'register', status: :unprocessable_entity
       # add errors

@@ -1,16 +1,17 @@
 <% if notice %>
-  <div class="alert alert-info alert-dismissible fade show m-1" role="alert">
-    <%= notice %>
+  <div class="notice notice-info">
+    <h2> <%= notice["title"] %> </h2>
+    <p> <%= notice["message"] %></p>
     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
       x
     </button>
   </div>
 <% end %>
 <% if alert %>
-  <div class="alert alert-warning alert-dismissible fade show m-1" role="alert">
+  <div class="notice notice-info alert">
     <%= alert %>
     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
-       x
-      </button>
+      x
+    </button>
   </div>
 <% end %>

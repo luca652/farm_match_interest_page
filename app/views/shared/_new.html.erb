@@ -1,12 +1,5 @@
 
 <%= simple_form_for @potential_user, html: { class: "form"} do |f| %>
-
-  <% if @potential_user.errors.any? %>
-    <div class="error-message">
-      <%= @potential_user.errors.full_messages.to_sentence.capitalize %>
-    </div>
-  <% end %>
-
   <%= f.input :name, input_html: { autofocus: true } %>
   <%= f.input :surname %>
   <%= f.input :email %>
