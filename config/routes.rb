@@ -4,6 +4,6 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   root "pages#welcome"
-  get "register-your-interest", to: "pages#register"
+  get "register-your-interest", to: "potential_users#register"
   resources :potential_users, only: [:new, :create]
 end

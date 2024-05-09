@@ -26,7 +26,9 @@
   </div>
 
   <div class="banner__join-us">
-    <button class="btn btn--primary">JOIN THE WAITING LIST!</button>
+    <%= link_to register_your_interest_path do %>
+      <button class="btn btn--primary">JOIN THE WAITING LIST!</button>
+    <% end %>
   </div>
 </div>
 
@@ -55,6 +57,11 @@
           Farm Match allows Farmers to post a job and receive quotations from interested peer reviewed Agri Contractors and Farm Workers.
         </p>
       </div>
+    </div>
+
+    <div class="farm-images container">
+      <%= image_tag "farmer.jpg" %>
+      <%= image_tag "tractor_and_grass.jpg" %>
     </div>
   </div>
 
@@ -153,15 +160,12 @@
     </div>
 
     <div class="join">
-      <button class="btn btn--primary">JOIN THE WAITING LIST!</button>
+      <%= link_to register_your_interest_path do %>
+        <button class="btn btn--primary">JOIN THE WAITING LIST!</button>
+      <% end %>
     </div>
 
   </section>
-
-  <div class="farm-images container">
-    <%= image_tag "farmer.jpg" %>
-    <%= image_tag "tractor_and_grass.jpg" %>
-  </div>
 
   <section class="how-it-works container why-and-how">
     <div class="how-it-works__header why-and-how-header">
@@ -278,7 +282,9 @@
     </div>
 
     <div class="join">
-      <button class="btn btn--primary">JOIN THE WAITING LIST!</button>
+      <%= link_to register_your_interest_path do %>
+        <button class="btn btn--primary">JOIN THE WAITING LIST!</button>
+      <% end %>
     </div>
 
   </section>
