@@ -64,18 +64,6 @@
   justify-content: center;
 }
 
-// .farmers__header {
-//   display: flex;
-//   justify-content: center;
-//   margin-bottom: var(--space-s);
-
-//   .farmers__title {
-//     color: var(--color-primary);
-//     -webkit-text-stroke: 2px var(--color-text-header);
-//   }
-// }
-
-
 .why-us {
   display: flex;
   flex-direction: column;
@@ -142,7 +130,6 @@
   flex-direction: column;
   align-items: center;
   margin: auto;
-  // margin-top: var(--space-m);
   margin-bottom: var(--space-m);
 
   @include media(tabletAndUp) {
@@ -200,12 +187,10 @@
 
 #why-farmers {
   background-color: var(--color-primary);
-  border-radius: var(--border-radius);
 }
 
 #why-contractors {
   background-color: var(--color-tertiary);
-  border-radius: var(--border-radius);
 }
 
 .reason-card {
@@ -301,18 +286,18 @@
   background-color: var(--color-primary);
   border-radius: 50%;
   margin-bottom: var(--space-m);
-  // box-shadow: var(--color-tertiary) 2px 2px;
 }
 
 .farm-images {
   margin-top: var(--space-m);
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: center;
   flex-wrap: wrap;
 
   img {
     width: 18rem;
+    margin: 0 var(--space-m);
     border-radius: var(--border-radius);
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
   }
@@ -330,17 +315,6 @@
     font-size: var(--font-size-xl);
   }
 }
-
-// .workers__header {
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-
-//   h1 {
-//     color: var(--color-tertiary);
-//     -webkit-text-stroke: 2px var(--color-text-header);
-//   }
-// }
 
 .hidden {
   display: none;

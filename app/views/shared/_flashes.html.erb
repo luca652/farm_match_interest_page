@@ -1,17 +1,21 @@
 <% if notice %>
   <div class="notice notice-info" data-controller="close-notice">
-    <h2> <%= notice["title"] %> </h2>
-    <p> <%= notice["message"] %></p>
+    <% if notice["title"] %>
+      <h2> <%= notice["title"] %> </h2>
+      <p> <%= notice["message"] %></p>
+    <% else %>
+      <%= notice %>
+    <% end %>
     <div class="btn-close" data-action="click->close-notice#close">
-     <i class="fa-regular fa-rectangle-xmark"></i>
+      <i class="fa-regular fa-rectangle-xmark"></i>
     </div>
   </div>
 <% end %>
 <% if alert %>
   <div class="notice notice-info alert" data-controller="close-notice">
     <%= alert %>
-    <button type="button" class="btn-close" data-action="click->close-notice#close">
-      x
-    </button>
+    <div class="btn-close" data-action="click->close-notice#close">
+      <i class="fa-regular fa-rectangle-xmark"></i>
+    </div>
   </div>
 <% end %>

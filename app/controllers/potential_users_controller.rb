@@ -1,10 +1,15 @@
 class PotentialUsersController < ApplicationController
+  before_action :authenticate_user!, only: :index
+
+  def index
+    @potential_users = PotentialUser.all
+  end
+
   def new
     @potential_user = PotentialUser.new
   end
 
   def create
-
     @potential_user = PotentialUser.new(potential_user_params)
 
     if @potential_user.save
