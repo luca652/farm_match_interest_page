@@ -145,13 +145,10 @@ GEM
       racc (~> 1.4)
     nokogiri (1.16.3-x86_64-darwin)
       racc (~> 1.4)
-<<<<<<< HEAD
     nokogiri (1.16.3-x86_64-linux)
       racc (~> 1.4)
-=======
     orm_adapter (0.5.0)
     pg (1.5.6)
->>>>>>> 2b94762a71f405ce76a12121bb2fa1ca765c812f
     psych (5.1.2)
       stringio
     public_suffix (5.0.5)
