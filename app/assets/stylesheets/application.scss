@@ -10,9 +10,13 @@
 // Components
 @import "components/btn";
 @import "components/navbar";
+@import "components/flash";
+@import "components/form";
+@import "components/separators";
 
 // Layouts
 @import "layouts/container";
 
 // Pages
 @import "pages/welcome";
+@import "pages/register";

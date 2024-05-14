@@ -26,7 +26,9 @@
   </div>
 
   <div class="banner__join-us">
-    <button class="btn btn--primary">JOIN THE WAITING LIST!</button>
+    <%= link_to register_your_interest_path do %>
+      <button class="btn btn--primary">JOIN THE WAITING LIST!</button>
+    <% end %>
   </div>
 </div>
 
@@ -56,11 +58,24 @@
         </p>
       </div>
     </div>
+
+    <div class="farm-images container">
+      <%= image_tag "farmer.jpg" %>
+      <%= image_tag "tractor_and_grass.jpg" %>
+    </div>
+
+    <div class="join">
+      <%= link_to register_your_interest_path do %>
+        <button class="btn btn--primary">JOIN THE WAITING LIST!</button>
+      <% end %>
+    </div>
   </div>
+
+  <hr class="separator-line--gray">
 
   <section class="why-sign-up why-and-how">
     <div class="why-sign-up__header why-and-how-header">
-      <h2>WHY FARM MATCH?</h2>
+      <h2>WHY SIGN UP?</h2>
       <div>
         <h4 data-section-target="whyCategoryTitle">FARMERS</h4>
         <div class="chevrons">
@@ -73,35 +88,35 @@
     <%# REASONS FOR FARMERS (can be switched with REASONS FOR CONTRACTORS) %>
     <div id="why-farmers" data-section-target="whyFarmersSection">
       <div class="reasons container">
-        <div class="reason-card reason-card--yellow">
+        <div class="reason-card reason-card--farmers">
           <div>
             <i class="fa-regular fa-thumbs-up"></i>
           </div>
           <h2>Easy to use</h2>
           <p>Simply post your task on the website & wait for the responses to come in!</p>
         </div>
-        <div class="reason-card reason-card--yellow">
+        <div class="reason-card reason-card--farmers">
           <div>
             <i class="fa-regular fa-clock"></i>
           </div>
           <h2>Save time</h2>
           <p>No more ringing around contractors or advertising in classifieds</p>
         </div>
-        <div class="reason-card reason-card--yellow">
+        <div class="reason-card reason-card--farmers">
           <div>
             <i class="fa-solid fa-piggy-bank"></i>
           </div>
           <h2>Save money</h2>
           <p>Compare quotes to get competitive pricing & get better value for money</p>
         </div>
-        <div class="reason-card reason-card--yellow">
+        <div class="reason-card reason-card--farmers">
           <div>
             <i class="fa-regular fa-trash-can"></i>
           </div>
           <h2>No spam</h2>
           <p>Our algorithm matches you only with Agri Contractors & Farm Workers who have express a direct interest in your task </p>
         </div>
-        <div class="reason-card reason-card--yellow">
+        <div class="reason-card reason-card--farmers">
           <div>
             <i class="fa-solid fa-magnifying-glass"></i>
           </div>
@@ -114,35 +129,35 @@
     <%# REASONS FOR CONTRACTORS (can be switched with REASONS FOR FARMERS)%>
     <div class="hidden" id="why-contractors" data-section-target="whyContractorsSection">
       <div class="reasons container">
-        <div class="reason-card reason-card--green">
+        <div class="reason-card reason-card--contractors">
           <div>
             <i class="fa-regular fa-thumbs-up"></i>
           </div>
           <h2>Easy to use</h2>
           <p>Want the task? Then simply express interest in it on the website </p>
         </div>
-        <div class="reason-card reason-card--green">
+        <div class="reason-card reason-card--contractors">
           <div>
             <i class="fa-regular fa-clock"></i>
           </div>
           <h2>Save time</h2>
           <p>Our algorithm ensures you're matched with tasks that fit your preferences</p>
         </div>
-        <div class="reason-card reason-card--green">
+        <div class="reason-card reason-card--contractors">
           <div>
             <i class="fa-solid fa-piggy-bank"></i>
           </div>
           <h2>Make Money </h2>
           <p>Allows you access to more task opportunities so you can increase your income</p>
         </div>
-        <div class="reason-card reason-card--green">
+        <div class="reason-card reason-card--contractors">
           <div>
             <i class="fa-solid fa-magnifying-glass"></i>
           </div>
           <h2>Increased Visibility</h2>
           <p>Our algorithm matches you only with Agri Contractors & Farm Workers who have express a direct interest in your task </p>
         </div>
-        <div class="reason-card reason-card--green">
+        <div class="reason-card reason-card--contractors">
           <div>
             <i class="fa-solid fa-medal"></i>
           </div>
@@ -153,15 +168,14 @@
     </div>
 
     <div class="join">
-      <button class="btn btn--primary">JOIN THE WAITING LIST!</button>
+      <%= link_to register_your_interest_path do %>
+        <button class="btn btn--primary" data-section-target="contractorsButton">JOIN THE WAITING LIST!</button>
+      <% end %>
     </div>
 
   </section>
 
-  <div class="farm-images container">
-    <%= image_tag "farmer.jpg" %>
-    <%= image_tag "tractor_and_grass.jpg" %>
-  </div>
+  <hr class="separator-line--gray">
 
   <section class="how-it-works container why-and-how">
     <div class="how-it-works__header why-and-how-header">
@@ -278,7 +292,9 @@
     </div>
 
     <div class="join">
-      <button class="btn btn--primary">JOIN THE WAITING LIST!</button>
+      <%= link_to register_your_interest_path do %>
+        <button class="btn btn--primary">JOIN THE WAITING LIST!</button>
+      <% end %>
     </div>
 
   </section>

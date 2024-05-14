@@ -1,0 +1,10 @@
+
+<%= simple_form_for @potential_user, html: { class: "form"} do |f| %>
+  <%= f.input :name, input_html: { autofocus: true, class: "form-field" }  %>
+  <%= f.input :surname, input_html: { class: "form-field" } %>
+  <%= f.input :email, input_html: { class: "form-field" } %>
+  <%= f.input :job, collection: PotentialUser::JOBS, input_html: { class: "form-field" } %>
+  <div class="form-submit">
+    <%= f.submit 'Submit', class: "btn btn--primary" %>
+  </div>
+<% end %>

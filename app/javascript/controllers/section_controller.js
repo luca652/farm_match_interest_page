@@ -7,7 +7,8 @@ export default class extends Controller {
                      "whyFarmersSection",
                      "whyContractorsSection",
                      "howFarmersSection",
-                     "howContractorsSection" ]
+                     "howContractorsSection",
+                     "contractorsButton" ]
 
   toggleSection(event) {
 
@@ -23,19 +24,24 @@ export default class extends Controller {
       } else { section.classList.add("hidden");}
     });
 
-    this.toggleTitle(button.id);
+    this.toggleTitle();
   }
 
   toggleTitle(id) {
     const titles = [this.whyCategoryTitleTarget, this.howCategoryTitleTarget];
+    const button = this.contractorsButtonTarget;
 
     titles.forEach(title => {
       if (title.innerHTML === "FARMERS") {
         title.innerHTML = "AGRI CONTRACTORS";
         title.style.backgroundColor = "var(--color-tertiary)";
+        button.style.color = "var(--color-text-header)";
+        button.style.backgroundColor = "var(--color-tertiary)";
       } else {
         title.innerHTML = "FARMERS";
         title.style.backgroundColor = "var(--color-primary)";
+        button.style.color = "var(--color-white)";
+        button.style.backgroundColor = "var(--color-primary)";
       }
     });
   };
