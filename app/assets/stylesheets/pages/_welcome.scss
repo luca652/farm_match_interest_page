@@ -44,19 +44,28 @@
   }
 }
 
-
-.banner__title {
+.title {
   color: white;
-  font-size: 4.5rem;
   text-align: center;
   font-weight: bold;
   -webkit-text-stroke: 2px var(--color-text-header);
+}
+
+.banner__title {
+  font-size: 4.5rem;
 
   @include media(tabletAndUp) {
     font-size: 6rem;
   }
 }
 
+.section__title {
+  font-size: 3.5rem;
+}
+
+.section__title--green {
+  color: var(--color-primary);
+}
 
 .tab-options {
   display: flex;
@@ -76,10 +85,6 @@
     margin-top: var(--space-xxxl);
     // margin-bottom: var(--space-xxxl);
     width: 60%;
-
-    h2 {
-      font-size: var(--font-size-xxxl);
-    }
   }
 }
 
@@ -125,7 +130,28 @@
 }
 
 .why-sign-up {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), var(--color-primary);
+  width: 100%;
+  padding-bottom: 4rem;
+  padding-top: 4rem;
+}
 
+.toggle {
+
+  background-color: var(--color-background);
+  border-radius: var(--border-radius);
+  border: 1px solid gray;
+  padding: 15px;
+  box-shadow: 4px 2px rgba(0,0,0,0.2);
+
+  .fa-toggle-on, .fa-toggle-off {
+    font-size: 2rem;
+
+  }
+
+  .fa-toggle-off {
+    display: none;
+  }
 }
 
 .why-and-how {
@@ -134,14 +160,6 @@
   align-items: center;
   margin: auto;
   margin-bottom: var(--space-m);
-
-  @include media(tabletAndUp) {
-    // margin-top: var(--space-xxxl);
-
-    h2 {
-      font-size: var(--font-size-xxxl);
-    }
-  }
 }
 
 .why-and-how-header {
@@ -180,20 +198,6 @@
   margin-bottom: -.4rem;
   padding-top: 2rem;
   padding-bottom: 2rem;
-}
-
-#why-farmers {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), var(--color-primary);
-  width: 100%;
-  padding-bottom: 2rem;
-  padding-top: 2rem;
-}
-
-#why-contractors {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), var(--color-tertiary);
-  width: 100%;
-  padding-bottom: 2rem;
-  padding-top: 2rem;
 }
 
 .reason-card {
