@@ -29,6 +29,6 @@ class PotentialUsersController < ApplicationController
   private
 
   def potential_user_params
-    params.require(:potential_user).permit(:name, :surname, :email, :job)
+    params.require(:potential_user).permit(:name, :surname, :email, :job, :county)
   end
 end
