@@ -4,6 +4,7 @@
   <%= f.input :surname, input_html: { class: "form-field" } %>
   <%= f.input :email, input_html: { class: "form-field" } %>
   <%= f.input :job, collection: PotentialUser::JOBS, input_html: { class: "form-field" } %>
+  <%= f.input :county, collection: PotentialUser::COUNTIES, input_html: { class: "form-field"} %>
   <div class="form-submit">
     <%= f.submit 'Submit', class: "btn btn--primary" %>
   </div>

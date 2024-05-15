@@ -6,6 +6,7 @@ class PotentialUser < ApplicationRecord
   validates :email, uniqueness: true
   validate :valid_email
   validates :job, presence: true
+  validates :county, presence: true
 
   def valid_email
     unless EmailAddress.valid? email
@@ -14,4 +15,9 @@ class PotentialUser < ApplicationRecord
   end
 
   JOBS = ["Farmer", "Agri Contractor", "Farm Worker"]
+  COUNTIES = ["Antrim", "Armagh", "Carlow", "Cavan", "Clare", "Cork", "Derry", "Donegal", "Down",
+              "Dublin", "Fermanagh", "Galway", "Kerry", "Kildare", "Kilkenny", "Laois", "Leitrim",
+              "Limerick", "Longford", "Louth", "Mayo", "Meath", "Monaghan", "Offaly", "Roscommon",
+              "Sligo", "Tipperary", "Tyrone", "Waterford", "Westmeath", "Wexford","Wicklow"]
+
 end
