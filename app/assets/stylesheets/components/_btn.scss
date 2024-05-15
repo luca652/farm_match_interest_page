@@ -29,6 +29,12 @@
     }
   }
 
+  &--primary-light {
+    color: var(--color-black);
+    background-color: var(--color-white);
+    border: 1px solid var(--primary);
+  }
+
   &--secondary {
     color: var(--color-white);
     background-image: linear-gradient(to right, var(--color-secondary), var(--color-secondary-rotate));

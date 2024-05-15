@@ -5,4 +5,9 @@
 
 .user-card {
   margin: var(--space-m) 0 var(--space-m) 0;
+
+  .user-card__header {
+    display: flex;
+    flex-direction: row;
+  }
 }

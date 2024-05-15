@@ -65,7 +65,7 @@
       </div>
     </div>
 
-    <div class="farm-images container">
+    <div class="farm-images">
       <%= image_tag "farmer.jpg" %>
       <%= image_tag "tractor_and_grass.jpg" %>
     </div>
@@ -82,12 +82,9 @@
   <section class="why-sign-up why-and-how">
     <div class="why-sign-up__header why-and-how-header">
       <h2>WHY SIGN UP?</h2>
-      <div>
-        <h4 data-section-target="whyCategoryTitle">FARMERS</h4>
-        <div class="chevrons">
-          <i class="fa-solid fa-circle-chevron-left" data-action="click->section#toggleSection"></i>
-          <i class="fa-solid fa-circle-chevron-right" data-action="click->section#toggleSection"></i>
-        </div>
+      <div class="title-buttons">
+        <h4 id="farmers-button" data-section-target="whyFarmersTitle" data-action="click->section#toggleSection">FARMERS</h4>
+        <h4 id="contractors-button" data-section-target="whyFarmersTitle" data-action="click->section#toggleSection">AGRI CONTRACTORS & FARM WORKERS</h4>
       </div>
     </div>
 
@@ -186,12 +183,10 @@
   <section class="how-it-works container why-and-how">
     <div class="how-it-works__header why-and-how-header">
       <h2>HOW DOES IT WORK?</h2>
-      <div>
-        <h4 data-section-target="howCategoryTitle">FARMERS</h4>
-        <div class="chevrons">
-          <i class="fa-solid fa-circle-chevron-left" data-action="click->section#toggleSection"></i>
-          <i class="fa-solid fa-circle-chevron-right" data-action="click->section#toggleSection"></i>
-        </div>
+
+      <div class="title-buttons">
+        <h4 id="farmers-button" data-section-target="whyFarmersTitle" data-action="click->section#toggleSection">FARMERS</h4>
+        <h4 id="contractors-button" data-section-target="whyFarmersTitle" data-action="click->section#toggleSection">AGRI CONTRACTORS & FARM WORKERS</h4>
       </div>
     </div>
 
