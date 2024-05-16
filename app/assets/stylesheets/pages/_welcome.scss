@@ -79,11 +79,11 @@
   align-items: center;
   margin: auto;
   margin-top: var(--space-m);
-  // margin-bottom: var(--space-m);
+  margin-bottom: var(--space-m);
 
   @include media(tabletAndUp) {
     margin-top: var(--space-xxxl);
-    // margin-bottom: var(--space-xxxl);
+    margin-bottom: var(--space-xxxxl);
     width: 60%;
   }
 }
@@ -134,6 +134,18 @@
   width: 100%;
   padding-bottom: 4rem;
   padding-top: 4rem;
+
+}
+
+.category-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: var(--space-m);
+
+  button:nth-of-type(1) {
+    margin-bottom: var(--space-xxxs);
+  }
 }
 
 .toggle {
@@ -164,6 +176,10 @@
   align-items: center;
   margin: auto;
   margin-bottom: var(--space-m);
+
+  @include media(tabletAndUp) {
+    margin-bottom: var(--space-xxxxl);
+  }
 }
 
 .why-and-how-header {

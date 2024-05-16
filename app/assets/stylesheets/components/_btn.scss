@@ -8,6 +8,7 @@
   cursor: pointer;
   outline: none;
   box-shadow: 2px 2px var(--color-text-header);
+  border: 1px solid var(--color-text-header);
 
   &:hover,
   &:focus,
@@ -19,7 +20,6 @@
   &--primary {
     color: var(--color-white);
     background-color: var(--color-primary);
-    border: 1px solid var(--color-text-header);
 
     &:hover,
     &:focus,
@@ -30,49 +30,17 @@
     }
   }
 
-  &--primary-light {
+  &--flip {
     color: var(--color-black);
-    background-color: var(--color-white);
-    border: 1px solid var(--primary);
-  }
+    background-color: var(--color-background);
 
-  &--secondary {
-    color: var(--color-white);
-    background-image: linear-gradient(to right, var(--color-secondary), var(--color-secondary-rotate));
-
-    &:hover,
-    &:focus,
-    &:focus-within,
-    &:active {
-      color: var(--color-white);
-      filter: saturate(1.2) brightness(110%);
-    }
-  }
-
-  &--light {
-    color: var(--color-dark);
-    background-color: var(--color-light);
-
-    &:hover,
-    &:focus,
-    &:focus-within,
-    &:active {
-      color: var(--color-dark);
-      filter: brightness(92%);
-    }
-  }
-
-  &--dark {
-    color: var(--color-white);
-    border-color: var(--color-dark);
-    background-color: var(--color-dark);
-
-    &:hover,
-    &:focus,
-    &:focus-within,
-    &:active {
-      color: var(--color-white);
-    }
+    // &:hover,
+    // &:focus,
+    // &:focus-within,
+    // &:active {
+    //   // background-color: rgb(243, 229, 43);
+    //   // font-weight: 900;
+    // }
   }
 
   &--tertiary {
