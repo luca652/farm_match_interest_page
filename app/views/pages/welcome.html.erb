@@ -19,7 +19,7 @@
 
 <div class="banner">
   <div class="title-container">
-    <h1 class="banner__title">FARM <br>MATCH</h1>
+    <h1 class="title banner__title">FARM <br>MATCH</h1>
   </div>
   <div class="banner__tagline">
     We connect Farmers with skilled Agri Contractors <br> and Farm Workers in Ireland
@@ -36,7 +36,7 @@
 <main data-controller="section">
   <div class="why-us">
     <div class="why-us__header">
-      <h2>WHY FARM MATCH?</h2>
+      <h2 class="title section__title section__title--green">WHY FARM MATCH?</h2>
     </div>
     <div class="why-us__body">
       <div>
@@ -65,7 +65,7 @@
       </div>
     </div>
 
-    <div class="farm-images container">
+    <div class="farm-images">
       <%= image_tag "farmer.jpg" %>
       <%= image_tag "tractor_and_grass.jpg" %>
     </div>
@@ -77,17 +77,18 @@
     </div>
   </div>
 
-  <hr class="separator-line--gray">
-
-  <section class="why-sign-up why-and-how">
+  <section class="why-sign-up why-and-how" data-section-target="sectionBackground">
     <div class="why-sign-up__header why-and-how-header">
-      <h2>WHY SIGN UP?</h2>
-      <div>
-        <h4 data-section-target="whyCategoryTitle">FARMERS</h4>
-        <div class="chevrons">
-          <i class="fa-solid fa-circle-chevron-left" data-action="click->section#toggleSection"></i>
-          <i class="fa-solid fa-circle-chevron-right" data-action="click->section#toggleSection"></i>
-        </div>
+      <h2 class="title section__title">WHY SIGN UP?</h2>
+      <div class="category-buttons">
+        <button data-category="farmers"
+                class="btn btn--tertiary"
+                data-section-target="farmersButton"
+                data-action="click->section#selectSection">FARMERS</button>
+        <button data-category="contractors"
+                class="btn btn--flip"
+                data-section-target="contractorsButton"
+                data-action="click->section#selectSection">AGRI CONTRACTORS & FARM WORKERS</button>
       </div>
     </div>
 
@@ -175,23 +176,25 @@
 
     <div class="join">
       <%= link_to register_your_interest_path do %>
-        <button class="btn btn--primary" data-section-target="contractorsButton">JOIN THE WAITING LIST!</button>
+        <button class="btn btn--primary">JOIN THE WAITING LIST!</button>
       <% end %>
     </div>
 
   </section>
 
-  <hr class="separator-line--gray">
-
   <section class="how-it-works container why-and-how">
     <div class="how-it-works__header why-and-how-header">
-      <h2>HOW DOES IT WORK?</h2>
-      <div>
-        <h4 data-section-target="howCategoryTitle">FARMERS</h4>
-        <div class="chevrons">
-          <i class="fa-solid fa-circle-chevron-left" data-action="click->section#toggleSection"></i>
-          <i class="fa-solid fa-circle-chevron-right" data-action="click->section#toggleSection"></i>
-        </div>
+      <h2 class="title section__title section__title--green">HOW DOES IT WORK?</h2>
+
+      <div class="category-buttons">
+        <button data-category="farmers"
+                class="btn btn--tertiary"
+                data-section-target="farmersButton"
+                data-action="click->section#selectSection">FARMERS</button>
+        <button data-category="contractors"
+                class="btn btn--flip"
+                data-section-target="contractorsButton"
+                data-action="click->section#selectSection">AGRI CONTRACTORS & FARM WORKERS</button>
       </div>
     </div>
 
