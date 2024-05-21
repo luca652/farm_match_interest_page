@@ -81,12 +81,12 @@
     <div class="why-sign-up__header why-and-how-header">
       <h2 class="title section__title">WHY SIGN UP?</h2>
       <div class="category-buttons">
-        <button id="farmers"
+        <button data-category="farmers"
                 class="btn btn--tertiary"
                 data-section-target="farmersButton"
                 data-action="click->section#selectSection">FARMERS</button>
-        <button id="contractors"
-                class="btn btn--flip"
+        <button data-category="contractors"
+                class="btn btn--primary btn--flip"
                 data-section-target="contractorsButton"
                 data-action="click->section#selectSection">AGRI CONTRACTORS & FARM WORKERS</button>
       </div>
@@ -186,9 +186,15 @@
     <div class="how-it-works__header why-and-how-header">
       <h2 class="title section__title section__title--green">HOW DOES IT WORK?</h2>
 
-      <div class="title-buttons">
-        <h4 id="farmers-button" data-section-target="whyFarmersTitle" data-action="click->section#toggleSection">FARMERS</h4>
-        <h4 id="contractors-button" data-section-target="whyFarmersTitle" data-action="click->section#toggleSection">AGRI CONTRACTORS & FARM WORKERS</h4>
+      <div class="category-buttons">
+        <button data-category="farmers"
+                class="btn btn--tertiary"
+                data-section-target="farmersButton"
+                data-action="click->section#selectSection">FARMERS</button>
+        <button data-category="contractors"
+                class="btn btn--primary btn--flip"
+                data-section-target="contractorsButton"
+                data-action="click->section#selectSection">AGRI CONTRACTORS & FARM WORKERS</button>
       </div>
     </div>
 

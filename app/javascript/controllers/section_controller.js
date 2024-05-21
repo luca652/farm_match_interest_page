@@ -15,19 +15,20 @@ export default class extends Controller {
                       this.contractorsButtonTarget]
 
     buttons.forEach(button => {
+
       if (button !== event.currentTarget) {
         button.classList.remove("btn--tertiary");
         button.classList.add("btn--flip");
       } else {
         button.classList.add("btn--tertiary");
-        button.classList.remove("bnt--flip");
+        button.classList.remove("btn--flip");
       }
     })
 
-    this.loadSection(event.currentTarget.id)
+    this.loadSection(event.currentTarget.dataset.category)
   }
 
-  loadSection(id) {
+  loadSection(category) {
     const whySections = [this.whyFarmersSectionTarget,
                          this.whyContractorsSectionTarget ];
     const howSections = [this.howFarmersSectionTarget,
@@ -35,7 +36,7 @@ export default class extends Controller {
     const background = this.sectionBackgroundTarget;
 
     whySections.forEach((section) => {
-      if (section.id !== `why-${id}`) {
+      if (section.id !== `why-${category}`) {
         section.classList.add("hidden");
       } else {
         section.classList.remove("hidden");
@@ -43,14 +44,14 @@ export default class extends Controller {
     })
 
     howSections.forEach((section) => {
-      if (section.id !== `how-${id}`) {
+      if (section.id !== `how-${category}`) {
         section.classList.add("hidden");
       } else {
         section.classList.remove("hidden");
       }
     })
 
-    if (id === "contractors") {
+    if (category === "contractors") {
       background.classList.add("why-sign-up-contractors");
     } else {
       background.classList.remove("why-sign-up-contractors");
