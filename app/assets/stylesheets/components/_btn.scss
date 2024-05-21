@@ -14,7 +14,7 @@
   &:focus,
   &:focus-within,
   &:active {
-    transition: filter 250ms, color 200ms;
+    transition: all 250ms, color 200ms;
   }
 
   &--primary {
@@ -22,8 +22,8 @@
     background-color: var(--color-primary);
 
     &:hover,
-    &:focus,
-    &:focus-within,
+    // &:focus,
+    // &:focus-within,
     &:active {
       color: var(--color-white);
       filter: saturate(1.4) brightness(115%);
@@ -34,13 +34,9 @@
     color: var(--color-black);
     background-color: var(--color-background);
 
-    // &:hover,
-    // &:focus,
-    // &:focus-within,
-    // &:active {
-    //   // background-color: rgb(243, 229, 43);
-    //   // font-weight: 900;
-    // }
+    &:hover {
+      box-shadow: 2px 2px var(--color-tertiary);
+    }
   }
 
   &--tertiary {
@@ -48,14 +44,8 @@
     background-color: var(--color-tertiary);
 
     &:hover,
-    &:focus,
-    &:focus-within,
     &:active {
       filter: saturate(1.2) brightness(110%);
     }
-  }
-
-  &--active {
-    border: 2px solid var(--color-tertiary);
   }
 }

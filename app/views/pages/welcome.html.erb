@@ -77,25 +77,19 @@
     </div>
   </div>
 
-  <section class="why-sign-up why-and-how">
+  <section class="why-sign-up why-and-how" data-section-target="sectionBackground">
     <div class="why-sign-up__header why-and-how-header">
       <h2 class="title section__title">WHY SIGN UP?</h2>
       <div class="category-buttons">
-        <button class="btn btn--tertiary">FARMERS</button>
-        <button class="btn btn--flip">AGRI CONTRACTORS & FARM WORKERS</button>
+        <button id="farmers"
+                class="btn btn--tertiary"
+                data-section-target="farmersButton"
+                data-action="click->section#selectSection">FARMERS</button>
+        <button id="contractors"
+                class="btn btn--flip"
+                data-section-target="contractorsButton"
+                data-action="click->section#selectSection">AGRI CONTRACTORS & FARM WORKERS</button>
       </div>
-      <%# <div class="section__category toggle">
-        <h2>FARMERS</h2>
-        <i class="fa-solid fa-toggle-on"></i>
-      </div>
-      <div class="toggle">
-        <i class="fa-solid fa-toggle-on"></i>
-        <i class="fa-solid fa-toggle-off"></i>
-      </div>
-      <div class="title-buttons">
-        <h4 id="farmers-button" data-section-target="whyFarmersTitle" data-action="click->section#toggleSection">FARMERS</h4>
-        <h4 id="contractors-button" data-section-target="whyFarmersTitle" data-action="click->section#toggleSection">AGRI CONTRACTORS & FARM WORKERS</h4>
-      </div> %>
     </div>
 
     <%# REASONS FOR FARMERS (can be switched with REASONS FOR CONTRACTORS) %>
