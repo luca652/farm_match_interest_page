@@ -11,12 +11,12 @@ export default class extends Controller {
                      "sectionBackground"]
 
   selectSection(event) {
-    const buttons =  [this.farmersButtonTarget,
-                      this.contractorsButtonTarget]
+    const buttons =  [...this.farmersButtonTargets,
+                      ...this.contractorsButtonTargets]
 
     buttons.forEach(button => {
 
-      if (button !== event.currentTarget) {
+      if (button.dataset.category !== event.currentTarget.dataset.category) {
         button.classList.remove("btn--tertiary");
         button.classList.add("btn--flip");
       } else {
