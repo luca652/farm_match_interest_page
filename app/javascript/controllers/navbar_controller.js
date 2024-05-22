@@ -6,7 +6,6 @@ export default class extends Controller {
   static targets = ["navbarLinks", "burgerButton"]
 
   connect() {
-    console.log("Ecchime!");
     this.navbarToggle();
   }
 

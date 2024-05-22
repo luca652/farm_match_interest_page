@@ -8,7 +8,8 @@ export default class extends Controller {
                      "howContractorsSection",
                      "farmersButton",
                      "contractorsButton",
-                     "sectionBackground"]
+                     "sectionBackground",
+                     "circle"]
 
   selectSection(event) {
     const buttons =  [...this.farmersButtonTargets,
@@ -34,6 +35,7 @@ export default class extends Controller {
     const howSections = [this.howFarmersSectionTarget,
                          this.howContractorsSectionTarget];
     const background = this.sectionBackgroundTarget;
+    const circles = this.circleTargets;
 
     whySections.forEach((section) => {
       if (section.id !== `why-${category}`) {

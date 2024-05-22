@@ -319,9 +319,18 @@
   justify-content: center;
   width: 4rem;
   height: 4rem;
-  background-color: var(--color-primary);
   border-radius: 50%;
   margin-bottom: var(--space-m);
+
+
+}
+
+.card__circle--green {
+  background-color: var(--color-primary);
+}
+
+.card__circle--yellow {
+  background-color: var(--color-tertiary);
 }
 
 .farm-images {
