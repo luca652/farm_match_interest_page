@@ -1,5 +1,5 @@
 <% if notice %>
-  <div class="notice notice-info" data-controller="close-notice">
+  <div class="notice flash-notice notice-info" data-controller="close-notice">
     <% if notice["title"] %>
       <h2> <%= notice["title"] %> </h2>
       <p> <%= notice["message"] %></p>
@@ -12,7 +12,7 @@
   </div>
 <% end %>
 <% if alert %>
-  <div class="notice notice-info alert" data-controller="close-notice">
+  <div class="notice flash-notice notice-info alert" data-controller="close-notice">
     <%= alert %>
     <div class="btn-close" data-action="click->close-notice#close">
       <i class="fa-regular fa-rectangle-xmark"></i>
