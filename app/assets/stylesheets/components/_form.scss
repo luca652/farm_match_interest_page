@@ -60,6 +60,11 @@
     color: var(--color-primary);
   }
 
+  a {
+    text-decoration: underline;
+    font-weight: 100;
+  }
+
   .form-submit {
     display: flex;
     align-self: center;
@@ -69,6 +74,9 @@
   .form-gdpr-consent {
     font-size: var(--font-size-s);
   }
+  .potential_user_terms_of_service {
+    margin-top: .25rem;
+    margin-bottom: .75rem;}
 
   #potential_user_terms_of_service {
     margin-right: 0.5rem;
