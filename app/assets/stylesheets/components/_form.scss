@@ -21,6 +21,7 @@
   border-radius: var(--border-radius);
   border: 1px solid rgb(194, 194, 194);
   margin-bottom: var(--space-m);
+  max-width: 30rem;
 
   @include media(tabletAndUp) {
     min-width: 25rem;
@@ -63,5 +64,13 @@
     display: flex;
     align-self: center;
     justify-content: center;
+  }
+
+  .form-gdpr-consent {
+    font-size: var(--font-size-s);
+  }
+
+  #potential_user_terms_of_service {
+    margin-right: 0.5rem;
   }
 }

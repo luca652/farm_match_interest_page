@@ -7,6 +7,7 @@ class PotentialUser < ApplicationRecord
   validate :valid_email
   validates :job, presence: true
   validates :county, presence: true
+  validates :terms_of_service, acceptance: true
 
   def valid_email
     unless EmailAddress.valid? email

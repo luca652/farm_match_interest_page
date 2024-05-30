@@ -4,7 +4,8 @@ RSpec.describe PotentialUser, type: :model do
   let(:potential_user) { PotentialUser.create(name: "John",
                                               surname: "Doe",
                                               email: "johndoe@jd.com",
-                                              job: "Farmer")}
+                                              job: "Farmer",
+                                              county: "Antrim")}
 
   it 'has a name' do
     expect(potential_user.name).to eq("John")
@@ -44,17 +45,22 @@ RSpec.describe PotentialUser, type: :model do
       expect(potential_user).not_to be_valid
     end
 
-    # it 'can only be saved if the email address has not been taken' do
-    #   new_potential_user = PotentialUser.new(name: "Jane",
-    #                                          surname: "Doe",
-    #                                          email: "johndoe@jd.com",
-    #                                          job: "Farm Worker")
-    #   expect(new_potential_user).not_to be_valid
-    # end
-
     it 'cannot be saved without a job title' do
       potential_user.job = ''
       expect(potential_user).not_to be_valid
+    end
+
+    it 'cannot be saved without selecting a county' do
+      potential_user.county = ''
+      expect(potential_user).not_to be_valid
+      p potential_user.errors.full_messages
+      expect(potential_user.errors[:county]).to include("can't be blank")
+    end
+
+    it 'cannot be saved without agreeing to GDPR' do
+      potential_user.terms_of_service = false
+      expect(potential_user).not_to be_valid
+      expect(potential_user.errors[:terms_of_service]).to include("must be accepted")
     end
 
   end
