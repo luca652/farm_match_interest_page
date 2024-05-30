@@ -3,8 +3,11 @@
   <%= f.input :name, input_html: { autofocus: true, class: "form-field" }  %>
   <%= f.input :surname, input_html: { class: "form-field" } %>
   <%= f.input :email, input_html: { class: "form-field" } %>
-  <%= f.input :job, collection: PotentialUser::JOBS, input_html: { class: "form-field" } %>
-  <%= f.input :county, collection: PotentialUser::COUNTIES, input_html: { class: "form-field"} %>
+  <%= f.input :job, collection: PotentialUser::JOBS, prompt: "- Select -", input_html: { class: "form-field" } %>
+  <%= f.input :county, collection: PotentialUser::COUNTIES, prompt: "- Select -", input_html: { class: "form-field"} %>
+  <%= f.input :terms_of_service, as: :boolean,
+                                 label: sanitize("I have read and agree to the #{link_to "GDPR notice", gdpr_path}, and I consent to the collection and use of my personal data as described therein."),
+                                 label_html: { class: "form-gdpr-consent"} %>
   <div class="form-submit">
     <%= f.submit 'Submit', class: "btn btn--primary" %>
   </div>

@@ -1,0 +1,25 @@
+
+.gdpr-notice {
+  margin-top: var(--space-m);
+  margin-bottom: var(--space-m);
+  width: 90%;
+  background-color: var(--color-white);
+
+  h1, div {
+    margin-bottom: var(--space-l);
+  }
+
+  p {
+    margin: 0 var(--space-s);
+  }
+
+  @include media(tabletAndUp) {
+    margin-top: var(--space-xxxxl);
+    margin-bottom: var(--space-xxxxl);
+    width: 40%;
+
+    p {
+      margin: 0 var(--space-l);
+    }
+  }
+}
