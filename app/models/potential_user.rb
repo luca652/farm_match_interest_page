@@ -5,7 +5,7 @@ class PotentialUser < ApplicationRecord
   validates :email, presence: true
   validates :email, uniqueness: true
   validate :valid_email
-  validates :job, presence: true
+  validates :role, presence: true
   validates :county, presence: true
   validates :terms_of_service, acceptance: true
 
@@ -15,7 +15,7 @@ class PotentialUser < ApplicationRecord
     end
   end
 
-  JOBS = ["Farmer", "Agri Contractor", "Farm Worker"]
+  ROLES = ["Farmer", "Agri Contractor", "Farm Worker"]
   COUNTIES = ["Antrim", "Armagh", "Carlow", "Cavan", "Clare", "Cork", "Derry", "Donegal", "Down",
               "Dublin", "Fermanagh", "Galway", "Kerry", "Kildare", "Kilkenny", "Laois", "Leitrim",
               "Limerick", "Longford", "Louth", "Mayo", "Meath", "Monaghan", "Offaly", "Roscommon",

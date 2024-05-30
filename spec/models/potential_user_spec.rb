@@ -4,7 +4,7 @@ RSpec.describe PotentialUser, type: :model do
   let(:potential_user) { PotentialUser.create(name: "John",
                                               surname: "Doe",
                                               email: "johndoe@jd.com",
-                                              job: "Farmer",
+                                              role: "Farmer",
                                               county: "Antrim")}
 
   it 'has a name' do
@@ -19,8 +19,8 @@ RSpec.describe PotentialUser, type: :model do
     expect(potential_user.email).to eq("johndoe@jd.com")
   end
 
-  it 'has a job title' do
-    expect(potential_user.job).to eq("Farmer")
+  it 'has a role title' do
+    expect(potential_user.role).to eq("Farmer")
   end
 
   describe 'validations' do
@@ -45,8 +45,8 @@ RSpec.describe PotentialUser, type: :model do
       expect(potential_user).not_to be_valid
     end
 
-    it 'cannot be saved without a job title' do
-      potential_user.job = ''
+    it 'cannot be saved without a role title' do
+      potential_user.role = ''
       expect(potential_user).not_to be_valid
     end
 
