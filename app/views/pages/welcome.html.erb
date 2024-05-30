@@ -7,9 +7,9 @@
   </div>
 
   <div class="navbar__options" data-navbar-target="navbarLinks" data-action="resize@window->navbar#navbarToggle">
-    <p> <%= link_to "How it works", root_path %></p>
-    <p> <%= link_to "Farmers", root_path %></p>
-    <p> <%= link_to "Agri Contractors & Farm Workers", root_path %></p>
+    <p> <%= link_to "How it Works", root_path(anchor: 'how-it-works') %></p>
+    <p> <%= link_to "Farmers", root_path(anchor: 'farmers-and-contractors') %></p>
+    <p> <%= link_to "Agri Contractors & Farm Workers", root_path(anchor: 'farmers-and-contractors') %></p>
   </div>
 
   <button class="burger-button" data-navbar-target="burgerButton" data-action="click->navbar#menuToggle">
@@ -36,7 +36,7 @@
 <main data-controller="section">
   <div class="why-us">
     <div class="why-us__header">
-      <h2 class="title section__title section__title--green">WHY FARM MATCH?</h2>
+      <h2 class="title section__title section__title--green">OUR SOLUTION</h2>
     </div>
     <div class="why-us__body">
       <div>
@@ -77,9 +77,9 @@
     </div>
   </div>
 
-  <section class="why-sign-up why-and-how" data-section-target="sectionBackground">
+  <section class="why-sign-up why-and-how" data-section-target="sectionBackground" id="farmers-and-contractors">
     <div class="why-sign-up__header why-and-how-header">
-      <h2 class="title section__title">WHY SIGN UP?</h2>
+      <h2 class="title section__title">BENEFITS OF JOINING</h2>
       <div class="category-buttons">
         <button data-category="farmers"
                 class="btn btn--tertiary"
@@ -121,14 +121,14 @@
             <i class="fa-regular fa-trash-can"></i>
           </div>
           <h2>No Spam</h2>
-          <p>Our algorithm matches you only with Agri Contractors & Farm Workers who have express a direct interest in your task </p>
+          <p>Match with Agri Contractors & Farm Workers interested in your task</p>
         </div>
         <div class="reason-card reason-card--farmers">
           <div>
             <i class="fa-solid fa-magnifying-glass"></i>
           </div>
           <h2>Peer Reviewed</h2>
-          <p>Leave a review once the work is done & help build a reliable Agri Contractors & Farmer Workers </p>
+          <p>Review the work & help build a reliable Agri network </p>
         </div>
       </div>
     </div>
@@ -155,21 +155,21 @@
             <i class="fa-solid fa-piggy-bank"></i>
           </div>
           <h2>Make Money </h2>
-          <p>Allows you access to more task opportunities so you can increase your income</p>
+          <p>Get access to more opportunities and increase your income</p>
         </div>
         <div class="reason-card reason-card--contractors">
           <div>
             <i class="fa-solid fa-magnifying-glass"></i>
           </div>
           <h2>Increased Visibility</h2>
-          <p>Our algorithm matches you only with Agri Contractors & Farm Workers who have express a direct interest in your task </p>
+          <p>Get increased recognition and expand your customer base</p>
         </div>
         <div class="reason-card reason-card--contractors">
           <div>
             <i class="fa-solid fa-medal"></i>
           </div>
           <h2>Build a Reputation </h2>
-          <p>Receive reviews from farmers after completing tasks & build a positive reputation leading to more work opportunities  </p>
+          <p>Get farmer feedback & enhance your reputation for future opportunities</p>
         </div>
       </div>
     </div>
@@ -183,8 +183,8 @@
   </section>
 
   <section class="how-it-works container why-and-how">
-    <div class="how-it-works__header why-and-how-header">
-      <h2 class="title section__title section__title--green">HOW DOES IT WORK?</h2>
+    <div class="how-it-works__header why-and-how-header" id="how-it-works">
+      <h2 class="title section__title section__title--green">HOW IT WORKS</h2>
 
       <div class="category-buttons">
         <button data-category="farmers"
@@ -227,8 +227,7 @@
           <div class="card__body">
             <h4>Match made in heaven!</h4>
           <p>
-            Our algorithm pairs your task with interested Agri Contractors & Farm Workers.
-            Review their profiles & shortlist your preferred candidates. Your contact details will only be revealed to shortlisted candidates. They will then contact you & discuss the task & pricing in detail.
+           Our algorithm matches your task with Agri Contractors & Workers. Review profiles, shortlist candidates, and they'll contact you to discuss details and pricing.
           </p>
           </div>
         </div>
@@ -237,7 +236,7 @@
             <div class="card__circle card__circle--green" data-section-target="circle">
               <h2>3</h2>
             </div>
-            <h1>Review the task</h1>
+            <h1>Review task</h1>
           </div>
           <div class="card__body">
             <h4>Reward honest and reliable service</h4>
@@ -278,8 +277,7 @@
           <div class="card__body">
             <h4>Win the task!</h4>
           <p>
-            Get notified when a suitable task appears in your area & express interest in it.
-            If shortlisted by the farmer, then for a small fee, you will receive the farmers contact details. Contact the farmer directly to discuss the task & pricing in detail. Take the opportunity to promote yourself & win the task!
+            Get notified of tasks in your area & express interest. If shortlisted, pay a small fee for contact details, then discuss the task & pricing directly to win the job!
           </p>
           </div>
         </div>
