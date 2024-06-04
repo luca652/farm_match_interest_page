@@ -2,9 +2,10 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  username: luca
-  password: <%= Rails.application.credentials.postgres[:password]%>
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: farm_match_user
+  password: <%= Rails.application.credentials.postgres[:password]%>
+
 
 
 development:
