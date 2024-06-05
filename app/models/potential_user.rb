@@ -20,5 +20,23 @@ class PotentialUser < ApplicationRecord
               "Dublin", "Fermanagh", "Galway", "Kerry", "Kildare", "Kilkenny", "Laois", "Leitrim",
               "Limerick", "Longford", "Louth", "Mayo", "Meath", "Monaghan", "Offaly", "Roscommon",
               "Sligo", "Tipperary", "Tyrone", "Waterford", "Westmeath", "Wexford","Wicklow"]
-
+  TASKS = ['Application (Spraying and Spreading)',
+           'Drilling & Sowing',
+           'Fencing & Hedging',
+           'Grassland Harvesting',
+           'Crop Harvesting',
+           'Hedge Cutting',
+           'Machine & Tractor Hire',
+           'Maize Harvesting',
+           'Mobile feeding',
+           'Muck & Slurry',
+           'Painting & Powerwashing',
+           'Soil Preparation',
+           'Tree Cutting & Forestry',
+           'Plant Hire & Earthworks',
+           'Animal Care',
+           'Milking',
+           'General Yard Duties',
+           'Picking',
+           'Machinery Driving & Operation']
 end
