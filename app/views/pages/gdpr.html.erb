@@ -2,6 +2,9 @@
 <div class="container notice gdpr-notice">
 
   <H1>GDPR Notice</H1>
+  <div class="back-link">
+    <%= link_to sanitize("&larr; Back"), request.referrer || root_path %>
+  </div>
 
   <div>
     <h4>Purpose of Data Collection:</h4>
