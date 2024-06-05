@@ -5,7 +5,11 @@
   width: 90%;
   background-color: var(--color-white);
 
-  h1, div {
+  .back-link {
+    text-align: center;
+  }
+
+  div {
     margin-bottom: var(--space-l);
   }
 
