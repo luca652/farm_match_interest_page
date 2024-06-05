@@ -23,6 +23,11 @@ RSpec.describe PotentialUser, type: :model do
     expect(potential_user.role).to eq("Farmer")
   end
 
+  it 'can have tasks associated with it' do
+    potential_user.tasks = ['Application (Spraying and Spreading)', 'Drilling & Sowing']
+    expect(potential_user.tasks).to eq(['Application (Spraying and Spreading)', 'Drilling & Sowing'])
+  end
+
   describe 'validations' do
 
     it 'cannot be saved without a name' do

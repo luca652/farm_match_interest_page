@@ -65,6 +65,8 @@
     font-weight: 100;
   }
 
+
+
   .form-submit {
     display: flex;
     align-self: center;
@@ -81,4 +83,25 @@
   #potential_user_terms_of_service {
     margin-right: 0.5rem;
   }
+}
+
+
+.checkbox-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.75rem;
+
+  .checkbox label {
+    color: var(--color-text-muted);
+    font-family: var(--font-family-lato);
+    font-weight: bold;
+  }
+
+  input {
+    margin-right: var(--space-xxs);
+    margin-left: var(--space-s);
+  }
+}
+.checkbox-container > label {
+  margin-bottom: 0.25rem;
 }
