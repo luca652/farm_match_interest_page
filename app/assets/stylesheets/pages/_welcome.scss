@@ -112,6 +112,8 @@
   border-radius: var(--border-radius);
   margin: var(--space-xs) var(--space-m);
   box-shadow: 2px 2px var(--color-text-header);
+  display: flex;
+  flex-direction: column;
 
   @include media(tabletAndUp) {
     margin: var(--space-m) var(--space-m);
@@ -121,6 +123,15 @@
     display: flex;
     align-items: center;
     margin-bottom: .5rem;
+
+    h4 {
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+  }
+
+  .why-us__body--title {
+    justify-content: center;
   }
 
   p {
