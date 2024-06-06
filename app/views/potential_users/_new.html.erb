@@ -1,6 +1,6 @@
 
 <%= simple_form_for @potential_user, html: { class: "form"} do |f| %>
-  <%= f.input :name, input_html: { autofocus: true, class: "form-field" }  %>
+  <%= f.input :first_name, input_html: { autofocus: true, class: "form-field" }, label: "First Name"  %>
   <%= f.input :surname, input_html: { class: "form-field" } %>
   <%= f.input :email, input_html: { class: "form-field" } %>
   <%= f.input :role, collection: PotentialUser::ROLES, prompt: "- Select -", input_html: { class: "form-field" } %>
