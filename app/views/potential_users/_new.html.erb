@@ -6,15 +6,25 @@
   <%= f.input :role, collection: PotentialUser::ROLES, prompt: "- Select -", input_html: { class: "form-field" } %>
   <%= f.input :county, collection: PotentialUser::COUNTIES, prompt: "- Select -", input_html: { class: "form-field"} %>
 
-  <%= f.input :tasks, as: :check_boxes,
-                      collection: PotentialUser::TASKS,
-                      include_hidden: false,
-                      label: "What tasks are you interested in performing?",
-                      wrapper_html: { class: "checkbox-container"} %>
+  <div>
+    <h4 class="task-list-title">What tasks are you interested in?</h4>
+    <div class="task-list">
+      <% PotentialUser::TASKS.each do |category, tasks| %>
+        <h4><%= category %></h4>
+        <%= f.input :tasks, as: :check_boxes,
+                            label: false,
+                            collection: tasks,
+                            wrapper_html: {class: "checkbox-container"},
+                            include_hidden: false %>
+      <% end %>
+    </div>
+  </div>
 
-  <%= f.input :terms_of_service, as: :boolean, label: sanitize("I have read and agree to the #{link_to "GDPR notice", gdpr_path}, and I consent to the collection and use of my personal data as described therein."),
-                                               label_html: { class: "form-gdpr-consent"} %>
-
+  <div>
+    <%= f.input :terms_of_service, as: :boolean, label: sanitize("I have read and agree to the #{link_to "GDPR notice", gdpr_path}, and I consent to the collection and use of my personal data as described therein."),
+                                                 wrapper_html: { class: "form-gdpr-container"},
+                                                 label_html: { class: "form-gdpr-consent"} %>
+  </div>
   <div class="form-submit">
     <%= f.submit 'Submit', class: "btn btn--primary" %>
   </div>
