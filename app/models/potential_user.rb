@@ -1,6 +1,6 @@
 class PotentialUser < ApplicationRecord
 
-  validates :name, presence: true
+  validates :first_name, presence: true
   validates :surname, presence: true
   validates :email, presence: true
   validates :email, uniqueness: true
