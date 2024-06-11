@@ -1,12 +1,19 @@
 
-<div class="container">
+<div class="table-container">
 
   <h1>Potential Users</h1>
 
   <%= link_to "Log Out", destroy_user_session_path, data: { turbo_method: "delete" }  %>
 
-  <div class="card-container">
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>First name</th>
+      <th>Surname</th>
+      <th>Email</th>
+      <th>County</th>
+      <th>Tasks</th>
+    </tr>
     <%= render @potential_users %>
-  </div>
-
+  </table>
 </div>

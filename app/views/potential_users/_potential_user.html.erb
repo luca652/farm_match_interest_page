@@ -1,9 +1,9 @@
 
-<div class="user-card">
-  <div class="user-card__header">
-    <h4><%= "#{potential_user.first_name} #{potential_user.surname}" %></h4>
-  </div>
-  <p><%= potential_user.email %></p>
-  <p><%= potential_user.role %></p>
-  <p><%= potential_user.county %></p>
-</div>
+<tr>
+  <td><%= potential_user.id %></td>
+  <td><%= potential_user.first_name %></td>
+  <td><%= potential_user.surname %></td>
+  <td><%= potential_user.email %></td>
+  <td><%= potential_user.county %></td>
+  <td><%= potential_user.tasks.join(", ") %></td>
+</tr>
