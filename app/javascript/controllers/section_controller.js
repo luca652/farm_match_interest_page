@@ -18,10 +18,10 @@ export default class extends Controller {
     buttons.forEach(button => {
 
       if (button.dataset.category !== event.currentTarget.dataset.category) {
-        button.classList.remove("btn--tertiary");
+        button.classList.remove("btn--selected");
         button.classList.add("btn--flip");
       } else {
-        button.classList.add("btn--tertiary");
+        button.classList.add("btn--selected");
         button.classList.remove("btn--flip");
       }
     })
