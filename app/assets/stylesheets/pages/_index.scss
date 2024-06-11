@@ -1,13 +1,19 @@
 
-.card-container {
-
+.table-container {
+  padding-right: var(--space-m);
+  padding-left: var(--space-m);
 }
 
-.user-card {
-  margin: var(--space-m) 0 var(--space-m) 0;
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
 
-  .user-card__header {
-    display: flex;
-    flex-direction: row;
-  }
+table, th, td {
+  border: 1px solid black;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
 }
