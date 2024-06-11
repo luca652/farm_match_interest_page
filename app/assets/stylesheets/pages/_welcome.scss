@@ -159,7 +159,7 @@
 .category-buttons {
   display: flex;
   align-items: center;
-  margin-top: var(--space-m);
+  margin-top: var(--space-xxs);
 
   button:nth-of-type(1) {
     margin-right: var(--space-xxs);
@@ -378,6 +378,10 @@
 
 .hidden {
   display: none;
+}
+
+main {
+  margin-bottom: var(--space-l);
 }
 
 .gdpr-link {
