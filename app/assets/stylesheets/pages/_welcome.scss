@@ -145,15 +145,23 @@
   }
 }
 
-.why-sign-up {
+.benefits-of-joining {
+  // background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), var(--color-primary);
+  // width: 100%;
+  // padding-bottom: 4rem;
+  // padding-top: 4rem;
+  // transition: all 0.3s;
+}
+
+.benefits-of-joining__content {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), var(--color-primary);
-  width: 100%;
-  padding-bottom: 4rem;
-  padding-top: 4rem;
+  width: 80%;
+  padding: 2rem;
+  border-radius: var(--border-radius);
   transition: all 0.3s;
 }
 
-.why-sign-up-contractors {
+.benefits-of-joining-contractors {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), var(--color-tertiary);
 }
 
@@ -235,8 +243,6 @@
   justify-content: center;
   flex-wrap: wrap;
   margin-bottom: -.4rem;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
 }
 
 .reason-card {

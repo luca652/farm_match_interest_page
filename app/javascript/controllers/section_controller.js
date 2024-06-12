@@ -15,14 +15,17 @@ export default class extends Controller {
     const buttons =  [...this.farmersButtonTargets,
                       ...this.contractorsButtonTargets]
 
+    console.log(buttons);
     buttons.forEach(button => {
+      const selectedCategory = event.currentTarget.dataset.category;
+      const buttonCategory = button.dataset.category;
 
-      if (button.dataset.category !== event.currentTarget.dataset.category) {
-        button.classList.remove("btn--selected");
-        button.classList.add("btn--flip");
+      if (buttonCategory !== selectedCategory) {
+        button.classList.remove(`tab--${buttonCategory}--selected`);
+        // button.classList.add(`tab--${selectedCategory}--selected`);
       } else {
-        button.classList.add("btn--selected");
-        button.classList.remove("btn--flip");
+        button.classList.add(`tab--${selectedCategory}--selected`);
+        // button.classList.remove("tab--farmers--selected");
       }
     })
 
@@ -54,9 +57,9 @@ export default class extends Controller {
     })
 
     if (category === "contractors") {
-      background.classList.add("why-sign-up-contractors");
+      background.classList.add("benefits-of-joining-contractors");
     } else {
-      background.classList.remove("why-sign-up-contractors");
+      background.classList.remove("benefits-of-joining-contractors");
     }
   }
 }
