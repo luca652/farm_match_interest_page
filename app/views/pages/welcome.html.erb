@@ -87,15 +87,15 @@
       </div>
     </div>
 
-    <div class="farm-images">
-      <%= image_tag "farmer.jpg" %>
-      <%= image_tag "tractor_and_grass.jpg" %>
-    </div>
-
     <div class="join">
       <%= link_to register_your_interest_path do %>
         <button class="btn btn--primary">JOIN THE WAITING LIST!</button>
       <% end %>
+    </div>
+
+    <div class="farm-images">
+      <%= image_tag "farmer.jpg" %>
+      <%= image_tag "tractor_and_grass.jpg" %>
     </div>
   </div>
 
@@ -156,11 +156,6 @@
             <p>Review the work & help build a reliable Agri network </p>
           </div>
         </div>
-        <div class="join">
-          <%= link_to register_your_interest_path do %>
-            <button class="btn btn--primary">JOIN THE WAITING LIST!</button>
-          <% end %>
-        </div>
       </div>
 
       <%# REASONS FOR CONTRACTORS (can be switched with REASONS FOR FARMERS)%>
@@ -202,12 +197,13 @@
             <p>Get farmer feedback & enhance your reputation for future opportunities</p>
           </div>
         </div>
-        <div class="join">
-          <%= link_to register_your_interest_path do %>
-            <button class="btn btn--primary">JOIN THE WAITING LIST!</button>
-          <% end %>
-        </div>
       </div>
+    </div>
+
+    <div class="join">
+      <%= link_to register_your_interest_path do %>
+        <button class="btn btn--primary">JOIN THE WAITING LIST!</button>
+      <% end %>
     </div>
   </section>
 

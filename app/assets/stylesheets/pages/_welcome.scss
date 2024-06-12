@@ -111,14 +111,10 @@
   background-color: var(--color-tertiary);
   padding: 1rem;
   border-radius: var(--border-radius);
-  margin: var(--space-xs) var(--space-m);
+  margin: var(--space-xs) var(--space-m) 0 var(--space-m);
   box-shadow: 2px 2px var(--color-text-header);
   display: flex;
   flex-direction: column;
-
-  @include media(tabletAndUp) {
-    margin: var(--space-m) var(--space-m);
-  }
 
   div {
     display: flex;
@@ -307,6 +303,7 @@
   margin: 1rem;
   background-color: var(--color-background);
   border-radius: var(--border-radius);
+  box-shadow: 4px 2px rgba(0, 0, 0, 0.2);
 }
 
 .card__header {
