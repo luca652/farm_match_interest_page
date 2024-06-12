@@ -8,7 +8,8 @@ export default class extends Controller {
                      "howContractorsSection",
                      "farmersButton",
                      "contractorsButton",
-                     "sectionBackground",
+                     "benefitsBackground",
+                     "howItWorksBackground",
                      "circle"]
 
   selectSection(event) {
@@ -16,13 +17,13 @@ export default class extends Controller {
                       ...this.contractorsButtonTargets]
 
     buttons.forEach(button => {
+      const selectedCategory = event.currentTarget.dataset.category;
+      const buttonCategory = button.dataset.category;
 
-      if (button.dataset.category !== event.currentTarget.dataset.category) {
-        button.classList.remove("btn--selected");
-        button.classList.add("btn--flip");
+      if (buttonCategory !== selectedCategory) {
+        button.classList.remove(`tab--${buttonCategory}--selected`);
       } else {
-        button.classList.add("btn--selected");
-        button.classList.remove("btn--flip");
+        button.classList.add(`tab--${selectedCategory}--selected`);
       }
     })
 
@@ -34,7 +35,8 @@ export default class extends Controller {
                          this.whyContractorsSectionTarget ];
     const howSections = [this.howFarmersSectionTarget,
                          this.howContractorsSectionTarget];
-    const background = this.sectionBackgroundTarget;
+    const backgrounds = [this.benefitsBackgroundTarget,
+                         this.howItWorksBackgroundTarget];
     const circles = this.circleTargets;
 
     whySections.forEach((section) => {
@@ -53,10 +55,13 @@ export default class extends Controller {
       }
     })
 
-    if (category === "contractors") {
-      background.classList.add("why-sign-up-contractors");
-    } else {
-      background.classList.remove("why-sign-up-contractors");
-    }
+
+    backgrounds.forEach((background) => {
+      if (category === "contractors") {
+        background.classList.add("yellow-background");
+      } else {
+        background.classList.remove("yellow-background");
+      }
+    });
   }
 }

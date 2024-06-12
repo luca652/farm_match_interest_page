@@ -111,14 +111,10 @@
   background-color: var(--color-tertiary);
   padding: 1rem;
   border-radius: var(--border-radius);
-  margin: var(--space-xs) var(--space-m);
+  margin: var(--space-xs) var(--space-m) 0 var(--space-m);
   box-shadow: 2px 2px var(--color-text-header);
   display: flex;
   flex-direction: column;
-
-  @include media(tabletAndUp) {
-    margin: var(--space-m) var(--space-m);
-  }
 
   div {
     display: flex;
@@ -145,47 +141,26 @@
   }
 }
 
-.why-sign-up {
+.benefits-of-joining__content {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), var(--color-primary);
-  width: 100%;
-  padding-bottom: 4rem;
-  padding-top: 4rem;
+  width: 80%;
+  padding: 2rem;
+  border-radius: var(--border-radius);
   transition: all 0.3s;
 }
 
-.why-sign-up-contractors {
+.benefits-of-joining__content.yellow-background,
+.how-it-works__content.yellow-background {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), var(--color-tertiary);
 }
 
-.category-buttons {
+.category-tabs {
   display: flex;
   align-items: center;
   margin-top: var(--space-xxs);
 
   button:nth-of-type(1) {
     margin-right: var(--space-xxs);
-  }
-}
-
-.toggle {
-
-  background-color: var(--color-background);
-  border-radius: var(--border-radius);
-  border: 1px solid gray;
-  padding: 15px;
-  box-shadow: 4px 2px rgba(0,0,0,0.2);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-
-  .fa-toggle-on, .fa-toggle-off {
-    font-size: 2rem;
-
-  }
-
-  .fa-toggle-off {
-    display: none;
   }
 }
 
@@ -235,8 +210,6 @@
   justify-content: center;
   flex-wrap: wrap;
   margin-bottom: -.4rem;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
 }
 
 .reason-card {
@@ -299,12 +272,19 @@
 
 }
 
+.how-it-works__content {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), var(--color-primary);
+  border-radius: var(--border-radius);
+  transition: all 0.3s;
+}
 
 .three-steps {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  padding: 2rem;
+
 
   h1 {
     text-decoration: underline;
@@ -319,7 +299,11 @@
 .card {
   text-align: center;
   padding: 20px;
-  width: 20rem;
+  width: 18rem;
+  margin: 1rem;
+  background-color: var(--color-background);
+  border-radius: var(--border-radius);
+  box-shadow: 4px 2px rgba(0, 0, 0, 0.2);
 }
 
 .card__header {

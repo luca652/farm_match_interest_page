@@ -87,110 +87,115 @@
       </div>
     </div>
 
+    <div class="join">
+      <%= link_to register_your_interest_path do %>
+        <button class="btn btn--primary">JOIN THE WAITING LIST!</button>
+      <% end %>
+    </div>
+
     <div class="farm-images">
       <%= image_tag "farmer.jpg" %>
       <%= image_tag "tractor_and_grass.jpg" %>
     </div>
-
-    <div class="join">
-      <%= link_to register_your_interest_path do %>
-        <button class="btn btn--primary">JOIN THE WAITING LIST!</button>
-      <% end %>
-    </div>
   </div>
 
-  <section class="why-sign-up why-and-how" data-section-target="sectionBackground" id="benefits-of-joining">
-    <div class="why-sign-up__header why-and-how-header">
+
+  <section class="benefits-of-joining why-and-how" id="benefits-of-joining">
+
+    <div class="benefits-of-joining__header why-and-how-header">
       <h2 class="section__title">BENEFITS OF JOINING</h2>
-      <div class="category-buttons">
-        <button data-category="farmers"
-                class="btn btn--selected"
-                data-section-target="farmersButton"
-                data-action="click->section#selectSection">FARMERS</button>
-        <button data-category="contractors"
-                class="btn btn--flip"
-                data-section-target="contractorsButton"
-                data-action="click->section#selectSection">AGRI CONTRACTORS & FARM WORKERS</button>
-      </div>
     </div>
 
-    <div id="why-farmers" data-section-target="whyFarmersSection">
-      <div class="reasons">
-        <div class="reason-card reason-card--farmers">
-          <div>
-            <i class="fa-regular fa-thumbs-up"></i>
-          </div>
-          <h2>Easy to Use</h2>
-          <p>Simply post your task on the website & wait for the responses to come in!</p>
-        </div>
-        <div class="reason-card reason-card--farmers">
-          <div>
-            <i class="fa-regular fa-clock"></i>
-          </div>
-          <h2>Save Time</h2>
-          <p>No more ringing around contractors or advertising in classifieds</p>
-        </div>
-        <div class="reason-card reason-card--farmers">
-          <div>
-            <i class="fa-solid fa-piggy-bank"></i>
-          </div>
-          <h2>Save Money</h2>
-          <p>Compare quotes to get competitive pricing & get better value for money</p>
-        </div>
-        <div class="reason-card reason-card--farmers">
-          <div>
-            <i class="fa-regular fa-trash-can"></i>
-          </div>
-          <h2>No Spam</h2>
-          <p>Match with Agri Contractors & Farm Workers interested in your task</p>
-        </div>
-        <div class="reason-card reason-card--farmers">
-          <div>
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </div>
-          <h2>Peer Reviewed</h2>
-          <p>Review the work & help build a reliable Agri network </p>
-        </div>
-      </div>
+    <div class="category-tabs">
+      <button data-category="farmers"
+              class="tab tab--farmers tab--farmers--selected"
+              data-section-target="farmersButton"
+              data-action="click->section#selectSection">FARMERS</button>
+      <button data-category="contractors"
+              class="tab tab--contractors"
+              data-section-target="contractorsButton"
+              data-action="click->section#selectSection">AGRI CONTRACTORS</button>
     </div>
 
-    <%# REASONS FOR CONTRACTORS (can be switched with REASONS FOR FARMERS)%>
-    <div class="hidden" id="why-contractors" data-section-target="whyContractorsSection">
-      <div class="reasons">
-        <div class="reason-card reason-card--contractors">
-          <div>
-            <i class="fa-regular fa-thumbs-up"></i>
+    <div class="benefits-of-joining__content" data-section-target="benefitsBackground">
+      <div id="why-farmers" data-section-target="whyFarmersSection">
+        <div class="reasons">
+          <div class="reason-card reason-card--farmers">
+            <div>
+              <i class="fa-regular fa-thumbs-up"></i>
+            </div>
+            <h2>Easy to Use</h2>
+            <p>Simply post your task on the website & wait for the responses to come in!</p>
           </div>
-          <h2>Easy to Use</h2>
-          <p>Want the task? Then simply express interest in it on the website </p>
+          <div class="reason-card reason-card--farmers">
+            <div>
+              <i class="fa-regular fa-clock"></i>
+            </div>
+            <h2>Save Time</h2>
+            <p>No more ringing around contractors or advertising in classifieds</p>
+          </div>
+          <div class="reason-card reason-card--farmers">
+            <div>
+              <i class="fa-solid fa-piggy-bank"></i>
+            </div>
+            <h2>Save Money</h2>
+            <p>Compare quotes to get competitive pricing & get better value for money</p>
+          </div>
+          <div class="reason-card reason-card--farmers">
+            <div>
+              <i class="fa-regular fa-trash-can"></i>
+            </div>
+            <h2>No Spam</h2>
+            <p>Match with Agri Contractors & Farm Workers interested in your task</p>
+          </div>
+          <div class="reason-card reason-card--farmers">
+            <div>
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <h2>Peer Reviewed</h2>
+            <p>Review the work & help build a reliable Agri network </p>
+          </div>
         </div>
-        <div class="reason-card reason-card--contractors">
-          <div>
-            <i class="fa-regular fa-clock"></i>
+      </div>
+
+      <%# REASONS FOR CONTRACTORS (can be switched with REASONS FOR FARMERS)%>
+      <div class="hidden" id="why-contractors" data-section-target="whyContractorsSection">
+        <div class="reasons">
+          <div class="reason-card reason-card--contractors">
+            <div>
+              <i class="fa-regular fa-thumbs-up"></i>
+            </div>
+            <h2>Easy to Use</h2>
+            <p>Want the task? Then simply express interest in it on the website </p>
           </div>
-          <h2>Save Time</h2>
-          <p>Our algorithm ensures you're matched with tasks that fit your preferences</p>
-        </div>
-        <div class="reason-card reason-card--contractors">
-          <div>
-            <i class="fa-solid fa-piggy-bank"></i>
+          <div class="reason-card reason-card--contractors">
+            <div>
+              <i class="fa-regular fa-clock"></i>
+            </div>
+            <h2>Save Time</h2>
+            <p>Our algorithm ensures you're matched with tasks that fit your preferences</p>
           </div>
-          <h2>Make Money </h2>
-          <p>Get access to more opportunities and increase your income</p>
-        </div>
-        <div class="reason-card reason-card--contractors">
-          <div>
-            <i class="fa-solid fa-magnifying-glass"></i>
+          <div class="reason-card reason-card--contractors">
+            <div>
+              <i class="fa-solid fa-piggy-bank"></i>
+            </div>
+            <h2>Make Money </h2>
+            <p>Get access to more opportunities and increase your income</p>
           </div>
-          <h2>Increased Visibility</h2>
-          <p>Get increased recognition and expand your customer base</p>
-        </div>
-        <div class="reason-card reason-card--contractors">
-          <div>
-            <i class="fa-solid fa-medal"></i>
+          <div class="reason-card reason-card--contractors">
+            <div>
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <h2>Increased Visibility</h2>
+            <p>Get increased recognition and expand your customer base</p>
           </div>
-          <h2>Build a Reputation </h2>
-          <p>Get farmer feedback & enhance your reputation for future opportunities</p>
+          <div class="reason-card reason-card--contractors">
+            <div>
+              <i class="fa-solid fa-medal"></i>
+            </div>
+            <h2>Build a Reputation </h2>
+            <p>Get farmer feedback & enhance your reputation for future opportunities</p>
+          </div>
         </div>
       </div>
     </div>
@@ -200,27 +205,27 @@
         <button class="btn btn--primary">JOIN THE WAITING LIST!</button>
       <% end %>
     </div>
-
   </section>
 
-  <section class="how-it-works container why-and-how">
+  <section class="how-it-works why-and-how">
     <div class="how-it-works__header why-and-how-header" id="how-it-works">
       <h2 class="section__title">HOW IT WORKS</h2>
-
-      <div class="category-buttons">
-        <button data-category="farmers"
-                class="btn btn--selected"
-                data-section-target="farmersButton"
-                data-action="click->section#selectSection">FARMERS</button>
-        <button data-category="contractors"
-                class="btn btn--flip"
-                data-section-target="contractorsButton"
-                data-action="click->section#selectSection">AGRI CONTRACTORS & FARM WORKERS</button>
-      </div>
     </div>
 
-    <div id="how-farmers" data-section-target="howFarmersSection">
-      <div class="three-steps container">
+    <div class="category-tabs">
+      <button data-category="farmers"
+              class="tab tab--farmers tab--farmers--selected"
+              data-section-target="farmersButton"
+              data-action="click->section#selectSection">FARMERS</button>
+      <button data-category="contractors"
+              class="tab tab--contractors"
+              data-section-target="contractorsButton"
+              data-action="click->section#selectSection">AGRI CONTRACTORS</button>
+    </div>
+
+
+    <div class="how-it-works__content" data-section-target="howItWorksBackground">
+      <div id="how-farmers" class="three-steps" data-section-target="howFarmersSection">
         <div class="card">
           <div class="card__header">
             <div class="card__circle card__circle--green" data-section-target="circle">
@@ -248,7 +253,7 @@
           <div class="card__body">
             <h4>Match made in heaven!</h4>
           <p>
-           Our algorithm matches your task with Agri Contractors & Workers. Review profiles, shortlist candidates, and they'll contact you to discuss details and pricing.
+          Our algorithm matches your task with Agri Contractors & Workers. Review profiles, shortlist candidates, and they'll contact you to discuss details and pricing.
           </p>
           </div>
         </div>
@@ -267,10 +272,8 @@
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="hidden" id="how-contractors" data-section-target="howContractorsSection">
-      <div class="three-steps container">
+      <div id="how-contractors" class="three-steps hidden" data-section-target="howContractorsSection">
         <div class="card">
           <div class="card__header">
             <div class="card__circle card__circle--yellow">
