@@ -8,24 +8,22 @@ export default class extends Controller {
                      "howContractorsSection",
                      "farmersButton",
                      "contractorsButton",
-                     "sectionBackground",
+                     "benefitsBackground",
+                     "howItWorksBackground",
                      "circle"]
 
   selectSection(event) {
     const buttons =  [...this.farmersButtonTargets,
                       ...this.contractorsButtonTargets]
 
-    console.log(buttons);
     buttons.forEach(button => {
       const selectedCategory = event.currentTarget.dataset.category;
       const buttonCategory = button.dataset.category;
 
       if (buttonCategory !== selectedCategory) {
         button.classList.remove(`tab--${buttonCategory}--selected`);
-        // button.classList.add(`tab--${selectedCategory}--selected`);
       } else {
         button.classList.add(`tab--${selectedCategory}--selected`);
-        // button.classList.remove("tab--farmers--selected");
       }
     })
 
@@ -37,7 +35,8 @@ export default class extends Controller {
                          this.whyContractorsSectionTarget ];
     const howSections = [this.howFarmersSectionTarget,
                          this.howContractorsSectionTarget];
-    const background = this.sectionBackgroundTarget;
+    const backgrounds = [this.benefitsBackgroundTarget,
+                         this.howItWorksBackgroundTarget];
     const circles = this.circleTargets;
 
     whySections.forEach((section) => {
@@ -56,10 +55,13 @@ export default class extends Controller {
       }
     })
 
-    if (category === "contractors") {
-      background.classList.add("benefits-of-joining-contractors");
-    } else {
-      background.classList.remove("benefits-of-joining-contractors");
-    }
+
+    backgrounds.forEach((background) => {
+      if (category === "contractors") {
+        background.classList.add("yellow-background");
+      } else {
+        background.classList.remove("yellow-background");
+      }
+    });
   }
 }
