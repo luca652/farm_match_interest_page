@@ -80,11 +80,11 @@
   align-items: center;
   margin: auto;
   margin-top: var(--space-m);
-  margin-bottom: var(--space-m);
+  // margin-bottom: var(--space-m);
 
   @include media(tabletAndUp) {
     margin-top: var(--space-xxxl);
-    margin-bottom: var(--space-xxxxl);
+    // margin-bottom: var(--space-xxxxl);
     width: 60%;
   }
 }
@@ -169,10 +169,10 @@
   flex-direction: column;
   align-items: center;
   margin: auto;
-  margin-bottom: var(--space-m);
+  // margin-bottom: var(--space-m);
 
   @include media(tabletAndUp) {
-    margin-bottom: var(--space-xxxxl);
+    // margin-bottom: var(--space-xxxxl);
   }
 }
 
@@ -334,14 +334,15 @@
 }
 
 .farm-images {
-  margin-top: var(--space-m);
+  margin-top: var(--space-xxl);
+  margin-bottom: var(--space-xxl);
   display: flex;
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
 
   img {
-    width: 18rem;
+    width: 28rem;
     margin: 0 var(--space-m);
     border-radius: var(--border-radius);
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
