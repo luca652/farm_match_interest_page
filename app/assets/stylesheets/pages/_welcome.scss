@@ -216,6 +216,7 @@
   width: 300px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   text-align: center;
   margin: var(--space-xs) var(--space-m);
   background-color: white;
@@ -223,11 +224,17 @@
   box-shadow: 4px 2px rgba(0,0,0,0.2);
   border-radius: var(--border-radius);
 
+  .icon-background {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+  }
+
   i {
     color: var(--color-text-body);
-    background-color: var(--color-secondary);
-    padding: 0.5rem;
-    border-radius: 50%;
   }
 
   h2 {
@@ -238,7 +245,7 @@
 }
 
 .reason-card--farmers {
-  i {
+  .icon-background {
     background-color: var(--color-secondary);
   }
 
@@ -248,7 +255,7 @@
 }
 
 .reason-card--contractors {
-  i {
+  .icon-background {
     background-color: var(--color-tertiary);
   }
 
@@ -310,7 +317,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: var(--space-xs)
+  margin-bottom: var(--space-s)
 }
 
 .card__circle {
