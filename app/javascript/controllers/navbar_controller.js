@@ -12,7 +12,7 @@ export default class extends Controller {
   navbarToggle() {
     const navbarLinks = this.navbarLinksTarget;
 
-    if (window.innerWidth < 768) {
+    if (window.innerWidth < 1024) {
       navbarLinks.classList.add("navbar__options--mobile");
       navbarLinks.classList.add("hidden");
     } else {

@@ -61,7 +61,7 @@
   height: 2rem;
   align-self: center;
 
-  @include media(md) {
+  @include media(lg) {
     display: none;
   }
 }
