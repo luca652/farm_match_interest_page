@@ -17,7 +17,7 @@
     margin: 0 var(--space-s);
   }
 
-  @include media(tabletAndUp) {
+  @include media(md) {
     margin-top: var(--space-xxxxl);
     margin-bottom: var(--space-xxxxl);
     width: 40%;

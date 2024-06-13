@@ -9,7 +9,7 @@
   flex-direction: column;
 
 
-  @include media(tabletAndUp) {
+  @include media(md) {
     padding-right: var(--space-m);
     padding-left: var(--space-m);
     max-width: 60rem;

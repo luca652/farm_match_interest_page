@@ -6,7 +6,7 @@
   justify-content: space-between;
   position: relative;
 
-  @include media(tabletAndUp) {
+  @include media(md) {
     padding: 1rem 2rem;
   }
 
@@ -61,7 +61,7 @@
   height: 2rem;
   align-self: center;
 
-  @include media(tabletAndUp) {
+  @include media(md) {
     display: none;
   }
 }

@@ -1,7 +1,7 @@
 
 .banner {
   width: 100%;
-  height: 70vh;
+  height: 95vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,19 +12,31 @@
   background-repeat: no-repeat;
   background-size: cover;
 
+  @include media(md) {
+    height: 70vh;
+  }
+
+  @include media(lg) {
+    height: 80vh;
+  }
+
   .banner__tagline {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     color: var(--color-tertiary);
     text-shadow: 1px 1px var(--color-text-header), -1px 1px var(--color-text-header), 1px -1px var(--color-text-header), -1px -1px var(--color-text-header);
     width: 80%;
-    margin-bottom: var(--space-m);
+    margin-bottom: var(--space-xxl);
     text-align: center;
     font-weight: bold;
 
-    @include media(tabletAndUp) {
+    @include media(md) {
       font-size: 2rem;
       width: 60%;
       margin-bottom: var(--space-xl);
+    }
+
+    @include media(lg) {
+      font-size: 3rem;
     }
   }
 
@@ -37,9 +49,9 @@
 
 .title-container {
   margin-top: var(--space-xxl);
-  margin-bottom: var(--space-m);
+  margin-bottom: var(--space-l);
 
-  @include media(tabletAndUp) {
+  @include media(md) {
     margin-top: var(--space-xxxxl);
   }
 }
@@ -52,16 +64,24 @@
 }
 
 .banner__title {
-  font-size: 4.5rem;
+  font-size: 5rem;
 
-  @include media(tabletAndUp) {
+  @include media(md) {
     font-size: 6rem;
+  }
+
+  @include media(lg) {
+    font-size: 8rem;
   }
 }
 
 .section__title {
-  font-size: 3rem;
+  font-size: 2rem;
   text-align: center;
+
+  @include media(md) {
+    font-size: 3rem;
+  }
 }
 
 .section__title--green {
@@ -82,7 +102,7 @@
   margin-top: var(--space-m);
   // margin-bottom: var(--space-m);
 
-  @include media(tabletAndUp) {
+  @include media(md) {
     margin-top: var(--space-xxxl);
     // margin-bottom: var(--space-xxxxl);
     width: 60%;
@@ -111,10 +131,14 @@
   background-color: var(--color-tertiary);
   padding: 1rem;
   border-radius: var(--border-radius);
-  margin: var(--space-xs) var(--space-m) 0 var(--space-m);
+  margin: var(--space-xs) var(--space-l) 0 var(--space-l);
   box-shadow: 2px 2px var(--color-text-header);
   display: flex;
   flex-direction: column;
+
+  @include media(md) {
+    margin: var(--space-xs) var(--space-m) 0 var(--space-m);
+  }
 
   div {
     display: flex;
@@ -143,10 +167,17 @@
 
 .benefits-of-joining__content {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), var(--color-primary);
-  width: 80%;
   padding: 2rem;
-  border-radius: var(--border-radius);
   transition: all 0.3s;
+
+  @include media(md) {
+    width: 80%;
+    border-radius: var(--border-radius);
+  }
+
+  @include media(xl) {
+    width: 65%;
+  }
 }
 
 .benefits-of-joining__content.yellow-background,
@@ -171,7 +202,7 @@
   margin: auto;
   // margin-bottom: var(--space-m);
 
-  @include media(tabletAndUp) {
+  @include media(md) {
     // margin-bottom: var(--space-xxxxl);
   }
 }
@@ -181,6 +212,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 90%;
 }
 
 .title-buttons {
@@ -265,7 +297,11 @@
 }
 
 .how-it-works {
-  margin-bottom: var(--space-xxxxl);
+  margin-bottom: 0;
+
+  @include media(md){
+    margin-bottom: var(--space-xxxxl);
+  }
 }
 
 .how-it-works__header {
@@ -281,8 +317,16 @@
 
 .how-it-works__content {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), var(--color-primary);
-  border-radius: var(--border-radius);
   transition: all 0.3s;
+
+  @include media(md) {
+    border-radius: var(--border-radius);
+    width: 80%;
+  }
+
+  @include media(xl) {
+    width: 65%;
+  }
 }
 
 .three-steps {
@@ -295,10 +339,9 @@
 
   h1 {
     text-decoration: underline;
-    // text-decoration-color: var(--color-tertiary);
   }
 
-  @include media(tabletAndUp) {
+  @include media(md) {
     flex-wrap: nowrap;
   }
 }
@@ -349,18 +392,31 @@
 }
 
 .farm-images {
-  margin-top: var(--space-xxl);
-  margin-bottom: var(--space-xxl);
+  margin-top: var(--space-xl);
+  margin-bottom: var(--space-xl);
   display: flex;
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
 
+  @include media(md) {
+    margin-top: var(--space-xxl);
+    margin-bottom: var(--space-xxl);
+  }
+
   img {
-    width: 28rem;
+    width: 18rem;
     margin: 0 var(--space-m);
     border-radius: var(--border-radius);
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
+
+    @include media(lg) {
+      width: 20rem;
+    }
+
+    @include media(lg) {
+      width: 28rem;
+    }
   }
 }
 
