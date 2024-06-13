@@ -23,7 +23,7 @@
   margin-bottom: var(--space-m);
   max-width: 30rem;
 
-  @include media(tabletAndUp) {
+  @include media(md) {
     min-width: 25rem;
   }
 
