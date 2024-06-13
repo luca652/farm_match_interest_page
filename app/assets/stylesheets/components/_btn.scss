@@ -24,7 +24,7 @@
     &:hover,
     &:active {
       color: var(--color-white);
-      filter: saturate(1.4) brightness(115%);
+      background-color: var(--color-secondary);
     }
   }
 
