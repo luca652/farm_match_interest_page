@@ -239,11 +239,11 @@
 
 .reason-card--farmers {
   i {
-    background-color: var(--color-tertiary);
+    background-color: var(--color-secondary);
   }
 
   h2 {
-    text-decoration-color: var(--color-secondary);
+    text-decoration-color: var(--color-tertiary);
   }
 }
 
@@ -288,7 +288,7 @@
 
   h1 {
     text-decoration: underline;
-    text-decoration-color: var(--color-tertiary);
+    // text-decoration-color: var(--color-tertiary);
   }
 
   @include media(tabletAndUp) {
@@ -326,11 +326,19 @@
 }
 
 .card__circle--green {
-  background-color: var(--color-primary);
+  background-color: var(--color-secondary);
 }
 
 .card__circle--yellow {
   background-color: var(--color-tertiary);
+}
+
+.three-steps h1.underline--green {
+  text-decoration-color: var(--color-secondary);
+}
+
+.three-steps h1.underline--yellow {
+  text-decoration-color: var(--color-tertiary);
 }
 
 .farm-images {

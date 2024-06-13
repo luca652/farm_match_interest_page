@@ -24,7 +24,7 @@
     &:hover,
     &:active {
       color: var(--color-white);
-      filter: saturate(1.4) brightness(115%);
+      background-color: var(--color-secondary);
     }
   }
 
@@ -69,12 +69,12 @@
 
     &--selected {
       border-color: var(--color-primary);
-      box-shadow: 0 0 0 0.25rem #5db375;
+      box-shadow: 0 0 0 0.25rem var(--color-secondary);
       font-weight: bolder;
     }
 
     &:hover {
-      background-color: #5db375;
+      background-color: var(--color-secondary);
     }
   }
 
