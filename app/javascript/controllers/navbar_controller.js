@@ -20,4 +20,9 @@ export default class extends Controller {
       navbarLinks.classList.remove("hidden");
     }
   }
+
+  menuToggle() {
+    const navbarLinks = this.navbarLinksTarget;
+    navbarLinks.classList.toggle("hidden");
+  }
 }
