@@ -1,22 +1,24 @@
 
-<%= simple_form_for @potential_user, html: { class: "form"} do |f| %>
+<%= simple_form_for @potential_user, html: { class: "form", data: { controller: "tasks"}} do |f| %>
   <%= f.input :first_name, input_html: { autofocus: true, class: "form-field" }, label: "First Name"  %>
   <%= f.input :surname, input_html: { class: "form-field" } %>
   <%= f.input :email, input_html: { class: "form-field" } %>
-  <%= f.input :role, collection: PotentialUser::ROLES, prompt: "- Select -", input_html: { class: "form-field" } %>
   <%= f.input :county, collection: PotentialUser::COUNTIES, prompt: "- Select -", input_html: { class: "form-field"} %>
+  <%= f.input :role, collection: PotentialUser::ROLES, prompt: "- Select -", input_html: { class: "form-field", data: { action: "change->tasks#showRelevantTasks"} } %>
 
   <div>
-    <h4 class="task-list-title">What tasks are you interested in?</h4>
+    <h4 class="task-list-title hidden" data-tasks-target="tasksHeader">What tasks are you interested in?</h4>
     <div class="task-list">
       <% PotentialUser::TASKS.each do |category, tasks| %>
-        <h4><%= category %></h4>
-        <%= f.input :tasks,
-                    as: :check_boxes,
-                    label: false,
-                    collection: tasks,
-                    wrapper_html: {class: "checkbox-container"},
-                    include_hidden: false %>
+        <div class="hidden" data-tasks-target="<%= category.split(" ").first %>">
+          <h4><%= category %></h4>
+          <%= f.input :tasks,
+                      as: :check_boxes,
+                      label: false,
+                      collection: tasks,
+                      wrapper_html: {class: "checkbox-container"},
+                      include_hidden: false %>
+        </div>
       <% end %>
     </div>
   </div>
