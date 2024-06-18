@@ -28,6 +28,7 @@ export default class extends Controller {
       plantTasks.classList.remove("hidden");
     }
     else if (role === "Farm Worker") {
+      header.classList.remove("hidden");
       farmTasks.classList.remove("hidden");
     } else {
       allCategories.forEach((category) => {
